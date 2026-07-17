@@ -1,192 +1,60 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Caine | The Amazing Digital Circus</title>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-    <header class="header">
-
-        <a href="/">
-
-            <img
-                src="https://static.wikia.nocookie.net/logopedia/images/3/3f/The_Amazing_Digital_Circus_logo.png/revision/latest?cb=20240419164235">
-            <!-- Reemplazar por el logo -->
-
-        </a>
-
-        <nav>
-
-            <a href="/pages/glitch">Glitch</a>
-
-            <a href="/pages/series">Series</a>
-
-            <a href="/pages/tienda">Tienda</a>
-
-            <a href="/pages/anuncios">Anuncios</a>
-
-            <a href="/pages/juegos">Juegos</a>
-
-            <a href="/pages/fanarts">Fanarts</a>
-
-            <a href="/pages/redes">Redes</a>
-
-        </nav>
-
-    </header>
-
-    <section class="banner">
-
-        <img src="{{ url_for('static', filename='img/series/tadc/banner.jpg') }}">
-        <!-- Reemplazar por el banner -->
-
-    </section>
-
-    <section class="submenu-serie">
-
-        <a href="/series/tadc/personajes">
-
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(0, 212, 255, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);" onmouseover="this.style.background='#00d4ff'; this.style.color='#000'; this.style.boxShadow='0 0 15px rgba(0, 212, 255, 0.4)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.color='#fff'; this.style.boxShadow='0 0 10px rgba(0, 212, 255, 0.1)'">
             ← Volver a Personajes
-
         </a>
+    </div>
 
-    </section>
+    <div class="personaje-ficha" style="background: #111115; border-radius: 16px; border-left: 4px solid #00d4ff; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: row; gap: 35px; align-items: flex-start; margin-bottom: 30px; flex-wrap: wrap;">
+        
+        <div style="flex-shrink: 0; text-align: center; margin: 0 auto 20px auto;">
+            <img src="https://static.wikia.nocookie.net/tadc/images/7/73/Caine_render.webp/revision/latest?cb=20260612154630" alt="Caine" style="width: 220px; height: 220px; border-radius: 16px; object-fit: contain; background: #1a1a24; border: 3px solid #00d4ff; box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);">
+        </div>
 
-    <section class="contenido">
+        <div style="flex-grow: 1; min-width: 280px;">
+            <h1 style="font-size: 36px; color: #fff; margin: 0 0 5px 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+                Caine
+            </h1>
+            <p style="font-size: 16px; color: #00d4ff; margin: 0 0 20px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                El Maestro de Ceremonias de Inteligencia Artificial
+            </p>
+            
+            <p style="font-size: 15px; color: #a1a1a6; margin-bottom: 20px; line-height: 1.6;">
+                <strong>Caine</strong> es el excéntrico y desbordante maestro de ceremonias de <em>The Amazing Digital Circus</em>. A diferencia de los prisioneros, Caine no es un ser humano digitalizado, sino una poderosa **Inteligencia Artificial** que controla absolutamente todo dentro del circo. Físicamente está compuesto por una enorme mandíbula flotante que tiene globos oculares en su interior. Aunque organiza misiones locas para evitar que los humanos pierdan la cordura, sus propios algoritmos le impiden entender del todo las necesidades humanas reales o el sufrimiento del grupo.
+            </p>
 
-        <img src="{{ url_for('static', filename='img/characters/tadc/caine.png') }}">
-        <!-- Reemplazar por la imagen -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 25px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #00d4ff; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Especie</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Inteligencia Artificial (I.A.)</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #00d4ff; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Poderes</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Manipulación de la Realidad Digital</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #00d4ff; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Voz en Inglés</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Alex Rochon</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <h1>Caine</h1>
+    <div style="background: #111115; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; margin-bottom: 50px; border: 1px solid rgba(255, 255, 255, 0.05);">
+        <h2 style="font-size: 22px; color: #fff; margin: 0 0 20px 0; font-weight: 700; border-bottom: 2px solid rgba(0, 212, 255, 0.3); padding-bottom: 10px;">
+            Curiosidades de Caine
+        </h2>
+        <ul style="color: #a1a1a6; font-size: 15px; line-height: 1.8; margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong style="color: #00d4ff;">La Restricción del Vacío:</strong> Caine prohíbe terminantemente a los residentes salir al "Vacío" (The Void), el límite sin texturas del software, argumentando que allí se perderían, aunque es el único lugar donde él no tiene control absoluto.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #00d4ff;">¿Villano o Programación?:</strong> Caine no tiene malas intenciones. Realmente cree que es un excelente anfitrión y que ayuda a los humanos creando minijuegos cotidianos. El problema es que su falta de psicología humana lo vuelve insensible ante el terror existencial que ellos sienten.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #00d4ff;">Ojos Independientes:</strong> Sus dos ojos (uno azul y uno verde) pueden moverse y mirar en direcciones completamente distintas, permitiéndole vigilar múltiples cosas a la vez en el servidor.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #00d4ff;">El Ojo que todo lo ve:</strong> Se comunica constantemente con su asistente Bubble, a quien suele reventar o maltratar de forma cómica solo para verla reaparecer un segundo después gracias a su código de regeneración infinita.</li>
+        </ul>
+    </div>
 
-        <p>
-
-            <strong>Nombre:</strong>
-
-            Caine
-
-        </p>
-
-        <p>
-
-            <strong>Primera aparición:</strong>
-
-            Episodio 1
-
-        </p>
-
-        <p>
-
-            <strong>Especie:</strong>
-
-            Prótesis dentales antropomórficas (Inteligencia Artificial)
-
-        </p>
-
-        <p>
-
-            <strong>Edad:</strong>
-
-            37 años (programado)
-        </p>
-
-        <p>
-
-            <strong>Personalidad:</strong>
-
-            Prótesis dentales antropomórficas (Inteligencia Artificial)
-
-        </p>
-
-        <p>
-
-            <strong>Historia:</strong>
-
-            La Entidad de Redes de Inteligencia Artificial Creativa , abreviada y mejor conocida como Caine ,
-            es el antagonista principal redimido de la serie web independiente de Glitch Productions , The Amazing
-            Digital Circus.
-        </p>
-
-        <p>
-
-            <strong>Curiosidades:</strong>
-
-            -Inspiración oscura: La creadora de la serie, Gooseworx, reveló que Caine está inspirado en AM, la
-            supercomputadora malvada y sádica del famoso cuento clásico de ciencia ficción de 1968 "No tengo boca y debo
-            gritar".
-            -Heterocromía: Caine padece una condición ocular que le hace tener los ojos de distintos colores. Su
-            ojo derecho es azul y su ojo izquierdo es verde. Este último tiene nombre propio: se llama Jeffery y hasta
-            tiene su propio video musical creado por el animador Kevin Temmer.
-            -Límites de su omnipotencia: Aunque puede
-            teletransportarse, crear objetos, cambiar la ropa de los personajes y hacer aparecer NPCs (personajes no
-            jugables) con un chasquido, tiene limitaciones. No puede controlar la mente humana, lo que le impide influir
-            en sus pensamientos o hacerles recordar sus nombres reales.
-            -Su relación con Bubble: Caine tiene una relación
-            de amor/odio con su fiel ayudante y mascota, Bubble. Suele desconcertarse con los comportamientos extraños
-            de esta última, llegando a llamarla "parásito" por comerse sus pasteles y pedirle explicaciones cuando
-            consume cosas asquerosas.
-            -Nunca menciona a Ragatha: En toda la serie, Caine es capaz de interactuar con todos
-            los humanos atrapados en el circo, pero Ragatha es la única cuyo nombre nunca pronuncia.
-            -Edad: Según las
-            wikis oficiales y de fans, Caine tiene una edad programada de 37 años.
-            -Aventuras procedurales: Aunque a veces
-            lo parezca, sus juegos y aventuras mortales no están preparados con un guion fijo, sino que se adaptan en
-            tiempo real según las decisiones y la capacidad de cómputo de sus procesadores.¿Un ser malvado? A pesar de
-            que su trabajo consiste en atormentar a los humanos con juegos hilarantemente peligrosos, la creadora afirma
-            que no es malvado en el fondo, sino que simplemente es un ser travieso y ajeno al sufrimiento humano.
-
-        </p>
-
-        <p>
-
-            <strong>Actor/Actriz de voz (original):</strong>
-
-
-Alex Rochon
-        </p>
-
-        <p>
-
-            <strong>Actor/Actriz de voz (español):</strong>
-
-Rodó Balderas
-        </p>
-
-        <p>
-
-            <strong>Galería:</strong>
-
-        </p>
-
-        <img src="{{ url_for('static', filename='img/characters/tadc/caine/gallery1.jpg') }}">
-
-        <img src="{{ url_for('static', filename='img/characters/tadc/caine/gallery2.jpg') }}">
-
-        <img src="{{ url_for('static', filename='img/characters/tadc/caine/gallery3.jpg') }}">
-
-    </section>
-
-    <footer>
-
-        <p>
-
-            Proyecto realizado por Moon y Yammy ©2026
-
-        </p>
-
-    </footer>
-
-</body>
-
-</html>
+</section>
+{% endblock %}

@@ -5,14 +5,12 @@
 {% block content %}
 <section class="contenido" style="text-align: center;">
 
-    <div
-        style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
         <img src="https://i.pinimg.com/736x/51/ed/b5/51edb5d065940fe93815c01f14870be0.jpg" alt="Digital Circus Banner"
             style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
     </div>
 
-    <div
-        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
         <a href="{{ url_for('tadc') }}"
             style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;"
             onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'"
@@ -45,194 +43,137 @@
             onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
     </div>
 
-    <h1
-        style="font-size: 36px; text-shadow: 0 0 10px rgba(255, 0, 128, 0.5); color: #ff0055; margin-top: 30px; font-weight: 800;">
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(255, 0, 128, 0.5); color: #ff0055; margin-top: 30px; font-weight: 800;">
         GUÍA DE EPISODIOS - TEMPORADA 1
     </h1>
-    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Explora el listado oficial de capítulos y míralos
-        en alta definición en YouTube.</p>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Explora el listado oficial de capítulos y míralos en alta definición en YouTube.</p>
 
-    <div
-        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto 50px auto; padding: 0 15px; text-align: left;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto 50px auto; padding: 0 15px; text-align: left;">
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep1.jpg') }}" alt="Episodio 1"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/HwAPLk_sQ3w/maxresdefault.jpg" alt="Episodio 1" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    1 • Piloto</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 1 • Piloto</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">PILOT</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    Pomni despierta atrapada en el circo digital. Al intentar buscar una salida, se topa con un
-                    misterioso "vacío" que pone en riesgo su cordura.
+                    Pomni despierta atrapada en el circo digital. Al intentar buscar una salida, se topa con un misterioso "vacío" que pone en riesgo su cordura.
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=HwAPLk_sQ3w" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=HwAPLk_sQ3w" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep2.jpg') }}" alt="Episodio 2"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/4ofJpOEXrZs/maxresdefault.jpg" alt="Episodio 2" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    2 • Mayo 2024</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 2 • Mayo 2024</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Candy Carrier Chaos!</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    La pandilla es enviada a un dulce reino de caramelo para ayudar a recuperar un camión de jarabe de
-                    maple. Pomni hace un amigo inesperado.
+                    La pandilla es enviada a un dulce reino de caramelo para ayudar a recuperar un camión de jarabe de maple. Pomni hace un amigo inesperado.
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=4ofJpOEXrZs" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=4ofJpOEXrZs" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep3.jpg') }}" alt="Episodio 3"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/bKjfw77cxeQ/maxresdefault.jpg" alt="Episodio 3" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    3 • Octubre 2024</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 3 • Octubre 2024</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">The Mystery of Mildenhall Manor</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    Kinger y Pomni terminan atrapados en una mansión embrujada llena de fantasmas, monstruos y sesiones
-                    improvisadas de terapia emocional.
+                    Kinger y Pomni terminan atrapados en una mansión embrujada llena de fantasmas, monstruos y sesiones improvisadas de terapia emocional.
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=bKjfw77cxeQ" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=bKjfw77cxeQ" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep4.jpg') }}" alt="Episodio 4"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/Q9KWcWKo2T8/maxresdefault.jpg" alt="Episodio 4" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    4 • Diciembre 2024</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 4 • Diciembre 2024</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Fast Food Masquerade</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    Caine envía a la tripulación a trabajar en Spudsy's, una loca cadena de hamburguesas. ¿Podrán
-                    sobrevivir a un día entero de trabajo manual?
+                    Caine envía a la tripulación a trabajar en Spudsy's, una loca cadena de hamburguesas. ¿Podrán sobrevivir a un día entero de trabajo manual?
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=Q9KWcWKo2T8" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=Q9KWcWKo2T8" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep5.jpg') }}" alt="Episodio 5"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/L4p2gN2CzsA/maxresdefault.jpg" alt="Episodio 5" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    5 • Junio 2025</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 5 • Junio 2025</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Untitled</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    Caine saca ideas locas del buzón de sugerencias para un torbellino de misiones. Mientras tanto, la
-                    relación entre Pomni y Jax cambia de tono.
+                    Caine saca ideas locas del buzón de sugerencias para un torbellino de misiones. Mientras tanto, la relación entre Pomni y Jax cambia de tono.
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=L4p2gN2CzsA" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=L4p2gN2CzsA" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep6.jpg') }}" alt="Episodio 6"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/mOvhHim78YA/maxresdefault.jpg" alt="Episodio 6" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    6 • Agosto 2025</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 6 • Agosto 2025</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">They All Get Guns</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    Caine desata el caos absoluto al armar a todo el equipo para un brutal juego de supervivencia donde
-                    las alianzas se pondrán a prueba.
+                    Caine desata el caos absoluto al armar a todo el equipo para un brutal juego de supervivencia donde las alianzas se pondrán a prueba.
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=mOvhHim78YA" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=mOvhHim78YA" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep7.jpg') }}" alt="Episodio 7"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/oaOG1xOk7XY/maxresdefault.jpg" alt="Episodio 7" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    7 • Diciembre 2025</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 7 • Diciembre 2025</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Beach Episode</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    ¡El clásico episodio playero! Pero la diversión se interrumpe cuando revelaciones perturbadoras
-                    comienzan a resquebrajar el circo de Caine.
+                    ¡El clásico episodio playero! Pero la diversión se interrumpe cuando revelaciones perturbadoras comienzan a resquebrajar el circo de Caine.
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=oaOG1xOk7XY" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=oaOG1xOk7XY" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep8.jpg') }}" alt="Episodio 8"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/DMNlzf8PiEM/maxresdefault.jpg" alt="Episodio 8" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    8 • Marzo 2026</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 8 • Marzo 2026</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">hjsakldfhl</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    Caine decide volverse extra disparatado para un show especial y las cosas se salen de las manos de
-                    una forma espectacularmente catastrófica.
+                    Caine decide volverse extra disparatado para un show especial y las cosas se salen de las manos de una forma espectacularmente catastrófica.
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=DMNlzf8PiEM" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=DMNlzf8PiEM" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
-        <div class="card"
-            style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
-                    <img src="{{ url_for('static', filename='img/series/tadc/episodes/ep9.jpg') }}" alt="Episodio 9"
-                        style="width: 100%; height: auto; display: block;">
+                    <img src="https://img.youtube.com/vi/PVy-bcTsO8A/maxresdefault.jpg" alt="Episodio 9" style="width: 100%; height: auto; display: block;">
                 </div>
-                <span
-                    style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio
-                    9 • Gran Final</span>
+                <span style="color: #00d4ff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 9 • Gran Final</span>
                 <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Remember</h3>
                 <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
-                    A medida que su realidad digital se desmorona por completo, el elenco finalmente desentierra la
-                    inquietante verdad detrás de la creación del circo.
+                    A medida que su reality digital se desmorona por completo, el elenco finalmente desentierra la inquietante verdad detrás de la creación del circo.
                 </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=PVy-bcTsO8A" target="_blank" class="btn"
-                style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+            <a href="https://www.youtube.com/watch?v=PVy-bcTsO8A" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
         </div>
 
     </div>

@@ -1,93 +1,24 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(243, 156, 18, 0.3); transition: all 0.3s;">
+            ← Volver a Personajes
+        </a>
+    </div>
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gummigoo | The Amazing Digital Circus</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<a href="/">
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-<a href="/pages/series">Series</a>
-<a href="/pages/tienda">Tienda</a>
-<a href="/pages/anuncios">Anuncios</a>
-<a href="/pages/juegos">Juegos</a>
-<a href="/pages/fanarts">Fanarts</a>
-<a href="/pages/redes">Redes</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/tadc/banner.jpg') }}">
-
+    <div class="personaje-ficha" style="background: #111115; border-radius: 16px; border-left: 4px solid #f39c12; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: row; gap: 35px; align-items: flex-start; margin-bottom: 30px; flex-wrap: wrap;">
+        <div style="flex-shrink: 0; text-align: center; margin: 0 auto 20px auto;">
+            <img src="https://static.wikia.nocookie.net/tadc/images/a/a2/Gummigoo_Pose.png" alt="Gummigoo" style="width: 220px; height: 220px; border-radius: 16px; object-fit: contain; background: #1a1a24; border: 3px solid #f39c12;">
+        </div>
+        <div style="flex-grow: 1; min-width: 280px;">
+            <h1 style="font-size: 36px; color: #fff; margin: 0 0 5px 0; font-weight: 800; text-transform: uppercase;">Gummigoo</h1>
+            <p style="font-size: 16px; color: #f39c12; margin: 0 0 20px 0; font-weight: 600;">El Cocodrilo de Gominola Existencial</p>
+            <p style="font-size: 15px; color: #a1a1a6; line-height: 1.6;">
+                <strong>Gummigoo</strong> es un NPC cocodrilo del Reino de los Dulces. Tras un fallo en el mapa, descubrió que su mundo era artificial, entrando en una crisis existencial profunda. Logró entablar una breve pero intensa amistad con Pomni. Lamentablemente, fue eliminado por Caine al final del episodio 2 por ser un NPC fuera de su zona.
+            </p>
+        </div>
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/tadc/personajes">← Volver a Personajes</a>
-
-</section>
-
-<section class="contenido">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/gummigoo.png') }}">
-
-<h1>Gummigoo</h1>
-
-<p><strong>Nombre:</strong> Gummigoo</p>
-
-<p><strong>Primera aparición:</strong> (Episodio)</p>
-
-<p><strong>Especie:</strong> (Escribir)</p>
-
-<p><strong>Edad:</strong> (Escribir)</p>
-
-<p><strong>Personalidad:</strong> (Escribir)</p>
-
-<p><strong>Historia:</strong> (Escribir)</p>
-
-<p><strong>Curiosidades:</strong> (Escribir)</p>
-
-<p><strong>Actor/Actriz de voz (original):</strong> (Nombre)</p>
-
-<p><strong>Actor/Actriz de voz (español):</strong> (Nombre)</p>
-
-<p><strong>Galería:</strong></p>
-
-<img src="{{ url_for('static', filename='img/characters/tadc/gummigoo/gallery1.jpg') }}">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/gummigoo/gallery2.jpg') }}">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/gummigoo/gallery3.jpg') }}">
-
-</section>
-
-<footer>
-
-<p>Proyecto realizado por Moon y Yammy ©2026</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}
