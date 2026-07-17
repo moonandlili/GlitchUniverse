@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Universe of Glitch</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='img/logo/favicon.png') }}">
+    <!-- Reemplazar por el icono de la página -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <a href="/">
+
+            <img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="The Universe of Glitch">
+
+            <!-- Reemplazar por el logo de la página -->
+
+        </a>
+
+    </div>
+
+    <nav class="navbar">
+
+        <a href="/">HOME</a>
+
+        <a href="/glitch">GLITCH</a>
+
+        <a href="/series">SERIES</a>
+
+        <a href="/tienda">STORE</a>
+
+        <a href="/anuncios">NEWS</a>
+
+        <a href="/fanarts">FANARTS</a>
+
+        <a href="/juegos">GAMES</a>
+
+        <a href="/redes">SOCIALS</a>
+
+    </nav>
+
+</header>
+
+<!-- ===================== HERO ===================== -->
+
+<section class="hero">
+
+    <img src="{{ url_for('static', filename='img/banners/home_banner.jpg') }}" alt="Banner Principal">
+
+    <!-- Reemplazar por el banner principal -->
+
+    <div class="hero-text">
+
+        <h1>THE UNIVERSE OF GLITCH</h1>
+
+        <p>
+            Everything about Glitch Productions,
+            its series, characters and community.
+        </p>
+
+        <a href="/series" class="button">
+
+            EXPLORE SERIES
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===================== FEATURED SERIES ===================== -->
+
+<section class="featured">
+
+    <h2>FEATURED SERIES</h2>
+
+    <div class="cards">
+
+        <a href="/series/tadc" class="card">
+
+            <img src="{{ url_for('static', filename='img/series/tadc/cover.png') }}" alt="The Amazing Digital Circus">
+
+            <!-- Reemplazar por la portada -->
+
+            <h3>The Amazing Digital Circus</h3>
+
+        </a>
+
+        <a href="/series/murder_drones" class="card">
+
+            <img src="{{ url_for('static', filename='img/series/murder_drones/cover.png') }}" alt="Murder Drones">
+
+            <!-- Reemplazar por la portada -->
+
+            <h3>Murder Drones</h3>
+
+        </a>
+
+        <a href="/series/meta_runner" class="card">
+
+            <img src="{{ url_for('static', filename='img/series/meta_runner/cover.png') }}" alt="Meta Runner">
+
+            <!-- Reemplazar por la portada -->
+
+            <h3>Meta Runner</h3>
+
+        </a>
+
+        <a href="/series/sunset_paradise" class="card">
+
+            <img src="{{ url_for('static', filename='img/series/sunset_paradise/cover.png') }}" alt="Sunset Paradise">
+
+            <!-- Reemplazar por la portada -->
+
+            <h3>Sunset Paradise</h3>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===================== NEWS ===================== -->
+
+<section class="news">
+
+    <h2>LATEST NEWS</h2>
+
+    <div class="news-container">
+
+        <div class="news-card">
+
+            <img src="{{ url_for('static', filename='img/banners/news1.png') }}">
+
+            <!-- Reemplazar por la imagen del anuncio -->
+
+            <h3>Title</h3>
+
+            <p>
+
+                Replace this text with the latest announcement.
+
+            </p>
+
+            <a href="/anuncios">
+
+                Read More
+
+            </a>
+
+        </div>
+
+        <div class="news-card">
+
+            <img src="{{ url_for('static', filename='img/banners/news2.png') }}">
+
+            <!-- Reemplazar por la imagen del anuncio -->
+
+            <h3>Title</h3>
+
+            <p>
+
+                Replace this text with another announcement.
+
+            </p>
+
+            <a href="/anuncios">
+
+                Read More
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== STORE ===================== -->
+
+<section class="store">
+
+    <h2>OFFICIAL STORE</h2>
+
+    <div class="store-box">
+
+        <img src="{{ url_for('static', filename='img/banners/store_banner.png') }}">
+
+        <!-- Reemplazar por un banner de la tienda -->
+
+        <div>
+
+            <h3>Official Merchandise</h3>
+
+            <p>
+
+                Discover plushies, apparel, accessories and more.
+
+            </p>
+
+            <a href="/tienda" class="button">
+
+                VISIT STORE
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================== FANARTS ===================== -->
+
+<section class="fanarts">
+
+    <h2>FEATURED FANARTS</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="{{ url_for('static', filename='img/fanarts/tadc/fanart1.png') }}" alt="Fanart TADC">
+
+            <!-- Reemplazar por un fanart -->
+
+        </div>
+
+        <div class="card">
+
+            <img src="{{ url_for('static', filename='img/fanarts/murder_drones/fanart1.png') }}" alt="Fanart Murder Drones">
+
+            <!-- Reemplazar por un fanart -->
+
+        </div>
+
+        <div class="card">
+
+            <img src="{{ url_for('static', filename='img/fanarts/meta_runner/fanart1.png') }}" alt="Fanart Meta Runner">
+
+            <!-- Reemplazar por un fanart -->
+
+        </div>
+
+    </div>
+
+    <a href="/fanarts" class="button">
+
+        VIEW GALLERY
+
+    </a>
+
+</section>
+
+<!-- ===================== GAMES ===================== -->
+
+<section class="games">
+
+    <h2>GAMES</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="{{ url_for('static', filename='img/banners/game1.png') }}">
+
+            <!-- Reemplazar por la imagen del juego -->
+
+            <h3>Game Title</h3>
+
+            <p>
+
+                Short description.
+
+            </p>
+
+            <a href="/juegos">
+
+                More Information
+
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <img src="{{ url_for('static', filename='img/banners/game2.png') }}">
+
+            <!-- Reemplazar por la imagen del juego -->
+
+            <h3>Game Title</h3>
+
+            <p>
+
+                Short description.
+
+            </p>
+
+            <a href="/juegos">
+
+                More Information
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== SOCIALS ===================== -->
+
+<section class="socials">
+
+    <h2>FOLLOW GLITCH</h2>
+
+    <div class="social-buttons">
+
+        <!-- Reemplazar # por el enlace correspondiente -->
+
+        <a href="#" target="_blank">
+
+            <img src="{{ url_for('static', filename='img/icons/youtube.png') }}">
+
+            YouTube
+
+        </a>
+
+        <a href="#" target="_blank">
+
+            <img src="{{ url_for('static', filename='img/icons/twitter.png') }}">
+
+            X / Twitter
+
+        </a>
+
+        <a href="#" target="_blank">
+
+            <img src="{{ url_for('static', filename='img/icons/instagram.png') }}">
+
+            Instagram
+
+        </a>
+
+        <a href="#" target="_blank">
+
+            <img src="{{ url_for('static', filename='img/icons/tiktok.png') }}">
+
+            TikTok
+
+        </a>
+
+        <a href="#" target="_blank">
+
+            <img src="{{ url_for('static', filename='img/icons/discord.png') }}">
+
+            Discord
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img src="{{ url_for('static', filename='img/logo/logo.png') }}">
+
+        <!-- Reemplazar por el logo -->
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="/">Home</a>
+
+        <a href="/glitch">Glitch</a>
+
+        <a href="/series">Series</a>
+
+        <a href="/tienda">Store</a>
+
+        <a href="/fanarts">Fanarts</a>
+
+        <a href="/juegos">Games</a>
+
+        <a href="/redes">Socials</a>
+
+    </div>
+
+    <div class="footer-text">
+
+        <p>
+
+            This is an unofficial fan project dedicated to Glitch Productions.
+
+        </p>
+
+        <p>
+
+            All rights belong to their respective owners.
+
+        </p>
+
+        <p>
+
+            Website created by Moon & Yammy © 2026
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

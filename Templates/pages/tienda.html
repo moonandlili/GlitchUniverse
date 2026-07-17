@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tienda | Glitch Productions</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<a href="/">
+
+<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
+
+</a>
+
+<nav>
+
+<a href="/pages/glitch">Glitch</a>
+
+<a href="/pages/series">Series</a>
+
+<a href="/pages/tienda" class="activo">Tienda</a>
+
+<a href="/pages/anuncios">Anuncios</a>
+
+</nav>
+
+</header>
+
+<section class="contenido">
+
+<h1>Tienda oficial</h1>
+
+<p>
+
+Explora algunos de los productos oficiales de Glitch Productions.
+
+</p>
+
+<div class="cards">
+
+<a href="#">
+<!-- Reemplazar por el enlace oficial -->
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/store/peluches.png') }}">
+
+<h3>Peluches</h3>
+
+</div>
+
+</a>
+
+<a href="#">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/store/ropa.png') }}">
+
+<h3>Ropa</h3>
+
+</div>
+
+</a>
+
+<a href="#">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/store/accesorios.png') }}">
+
+<h3>Accesorios</h3>
+
+</div>
+
+</a>
+
+<a href="#">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/store/coleccionables.png') }}">
+
+<h3>Coleccionables</h3>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+Proyecto realizado por Moon y Yammy ©2026
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

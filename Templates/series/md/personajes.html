@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Personajes | Murder Drones</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<a href="/">
+<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
+</a>
+
+<nav>
+
+<a href="/pages/glitch">Glitch</a>
+
+<a href="/pages/series">Series</a>
+
+<a href="/pages/tienda">Tienda</a>
+
+<a href="/pages/anuncios">Anuncios</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
+
+</section>
+
+<section class="submenu-serie">
+
+<a href="/series/md">Inicio</a>
+
+<a href="/series/md/informacion">Información</a>
+
+<a href="/series/md/capitulos">Capítulos</a>
+
+<a href="/series/md/personajes" class="activo">Personajes</a>
+
+<a href="/series/md/participantes">Participantes</a>
+
+<a href="/series/md/musica">Música</a>
+
+<a href="/series/md/curiosidades">Curiosidades</a>
+
+<a href="/series/md/redes">Redes</a>
+
+</section>
+
+<section class="contenido">
+
+<h1>Personajes</h1>
+
+<div class="cards">
+
+<a href="/series/md/characters/uzi">
+<div class="card">
+<img src="{{ url_for('static', filename='img/characters/md/uzi.png') }}">
+<h3>Uzi</h3>
+</div>
+</a>
+
+<a href="/series/md/characters/n">
+<div class="card">
+<img src="{{ url_for('static', filename='img/characters/md/n.png') }}">
+<h3>N</h3>
+</div>
+</a>
+
+<a href="/series/md/characters/v">
+<div class="card">
+<img src="{{ url_for('static', filename='img/characters/md/v.png') }}">
+<h3>V</h3>
+</div>
+</a>
+
+<a href="/series/md/characters/j">
+<div class="card">
+<img src="{{ url_for('static', filename='img/characters/md/j.png') }}">
+<h3>J</h3>
+</div>
+</a>
+
+<!-- Agregar el resto de personajes -->
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Proyecto realizado por Moon y Yammy ©2026</p>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personajes | The Amazing Digital Circus</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="/">
+
+        <img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="Logo">
+
+        <!-- Reemplazar por el logo -->
+
+    </a>
+
+    <nav>
+
+        <a href="/pages/glitch">Glitch</a>
+
+        <a href="/pages/series">Series</a>
+
+        <a href="/pages/tienda">Tienda</a>
+
+        <a href="/pages/anuncios">Anuncios</a>
+
+        <a href="/pages/juegos">Juegos</a>
+
+        <a href="/pages/fanarts">Fanarts</a>
+
+        <a href="/pages/redes">Redes</a>
+
+    </nav>
+
+</header>
+
+<section class="banner">
+
+    <img src="{{ url_for('static', filename='img/series/tadc/banner.jpg') }}" alt="Banner">
+
+    <!-- Reemplazar por el banner -->
+
+</section>
+
+<section class="submenu-serie">
+
+    <a href="/series/tadc">Inicio</a>
+
+    <a href="/series/tadc/informacion">Información</a>
+
+    <a href="/series/tadc/capitulos">Capítulos</a>
+
+    <a href="/series/tadc/personajes" class="activo">Personajes</a>
+
+    <a href="/series/tadc/people">Participantes</a>
+
+    <a href="/series/tadc/musica">Música</a>
+
+    <a href="/series/tadc/curiosidades">Curiosidades</a>
+
+    <a href="/series/tadc/redes">Redes oficiales</a>
+
+</section>
+
+<section class="contenido">
+
+<h1>Personajes</h1>
+
+<p>
+
+Selecciona un personaje para ver su información.
+
+</p>
+
+<div class="cards">
+
+<a href="/series/tadc/characters/pomni">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/characters/tadc/pomni.png') }}">
+<!-- Reemplazar por la imagen -->
+
+<h2>Pomni</h2>
+
+</div>
+
+</a>
+
+<a href="/series/tadc/characters/jax">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/characters/tadc/jax.png') }}">
+
+<h2>Jax</h2>
+
+</div>
+
+</a>
+
+<a href="/series/tadc/characters/ragatha">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/characters/tadc/ragatha.png') }}">
+
+<h2>Ragatha</h2>
+
+</div>
+
+</a>
+
+<a href="/series/tadc/characters/gangle">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/characters/tadc/gangle.png') }}">
+
+<h2>Gangle</h2>
+
+</div>
+
+</a>
+
+<a href="/series/tadc/characters/zooble">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/characters/tadc/zooble.png') }}">
+
+<h2>Zooble</h2>
+
+</div>
+
+</a>
+
+<a href="/series/tadc/characters/kinger">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/characters/tadc/kinger.png') }}">
+
+<h2>Kinger</h2>
+
+</div>
+
+</a>
+
+<a href="/series/tadc/characters/caine">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/characters/tadc/caine.png') }}">
+
+<h2>Caine</h2>
+
+</div>
+
+</a>
+
+<a href="/series/tadc/characters/bubble">
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='img/characters/tadc/bubble.png') }}">
+
+<h2>Bubble</h2>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+Proyecto realizado por Moon y Yammy ©2026
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

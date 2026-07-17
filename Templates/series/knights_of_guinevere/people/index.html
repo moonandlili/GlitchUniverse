@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Participantes | Knights of Guinevere</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<a href="/">
+<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
+</a>
+
+<nav>
+
+<a href="/pages/glitch">Glitch</a>
+
+<a href="/pages/series">Series</a>
+
+<a href="/pages/tienda">Tienda</a>
+
+<a href="/pages/anuncios">Anuncios</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<img src="{{ url_for('static', filename='img/series/knights_of_guinevere/banner.jpg') }}">
+
+</section>
+
+<section class="submenu-serie">
+
+<a href="/series/knights_of_guinevere">Inicio</a>
+
+<a href="/series/knights_of_guinevere/people" class="activo">Participantes</a>
+
+</section>
+
+<section class="contenido">
+
+<h1>Participantes</h1>
+
+<div class="cards">
+
+<a href="/series/knights_of_guinevere/people/creadores">
+
+<div class="card">
+
+<h3>Creadores</h3>
+
+</div>
+
+</a>
+
+<a href="/series/knights_of_guinevere/people/productores">
+
+<div class="card">
+
+<h3>Productores</h3>
+
+</div>
+
+</a>
+
+<a href="/series/knights_of_guinevere/people/actores_voz">
+
+<div class="card">
+
+<h3>Actores de voz</h3>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+Proyecto realizado por Moon y Yammy ©2026
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
