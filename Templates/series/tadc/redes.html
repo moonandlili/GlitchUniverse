@@ -1,191 +1,92 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Redes Oficiales | The Amazing Digital Circus{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-<meta charset="UTF-8">
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="{{ url_for('static', filename='img/series/tadc/banner.jpg') }}" alt="Digital Circus Socials Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
+        <a href="{{ url_for('tadc') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('tadc_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('tadc_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('tadc_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('tadc_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('tadc_redes') }}" style="text-decoration: none; color: #fff; background: #ff0055; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);">Redes Oficiales</a>
+    </div>
 
-<title>Redes oficiales | The Amazing Digital Circus</title>
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(255, 0, 128, 0.5); color: #ff0055; margin-top: 30px; font-weight: 800;">
+        CONÉCTATE AL CIRCO DIGITAL
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Sigue las cuentas oficiales de GLITCH Productions para enterarte de todas las novedades al instante.</p>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 950px; margin: 0 auto 60px auto; padding: 0 15px; text-align: left;">
 
-</head>
+        <div class="card" style="border-color: #ff0055; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">Sitio Web de GLITCH</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    La tienda oficial y el portal principal de la productora creadora de la serie. ¡Aquí encuentras todo el merchandising oficial de Pomni y sus amigos!
+                </p>
+            </div>
+            <a href="https://www.glitchprod.com/" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #ff0055; border-color: #ff0055;">Visitar Web Oficial 🌐</a>
+        </div>
 
-<body>
+        <div class="card" style="border-color: #ff0000; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">GLITCH en YouTube</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    El canal donde se estrenan de forma gratuita todos los episodios completos de The Amazing Digital Circus y sus trailers oficiales.
+                </p>
+            </div>
+            <a href="https://www.youtube.com/@glitch_prod" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #ff0000; border-color: #ff0000;">Ir al Canal 📺</a>
+        </div>
 
-<header class="header">
+        <div class="card" style="border-color: #00d4ff; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">X (Twitter) Oficial</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    Enterate de las fechas de estreno exactas, artes oficiales de los episodios, noticias rápidas e interacciones con el equipo de producción.
+                </p>
+            </div>
+            <a href="https://x.com/glitch_prod" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #1da1f2; border-color: #1da1f2;">Seguir en X 🐦</a>
+        </div>
 
-<a href="/">
+        <div class="card" style="border-color: #ff00bb; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">Instagram Oficial</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    Imágenes del detras de escena de la animación, promocionales del elenco de voces y adelantos interactivos de los próximos proyectos.
+                </p>
+            </div>
+            <a href="https://www.instagram.com/glitch_prod/" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: #bc1888;">Ver Instagram 📸</a>
+        </div>
 
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-<!-- Reemplazar por el logo -->
+        <div class="card" style="border-color: #00f0ff; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">TikTok de GLITCH</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    Clips rápidos de las mejores escenas de la serie, memes oficiales animados y videos interactivos creados especialmente para la comunidad de TikTok.
+                </p>
+            </div>
+            <a href="https://www.tiktok.com/@glitch_productions" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #010101; border-color: #25f4ee;">Ver TikTok 🎵</a>
+        </div>
 
-</a>
+        <div class="card" style="border-color: #ffffff; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">Canal de Gooseworx</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    Sigue de cerca a la asombrosa creadora de la serie. En su canal personal comparte animaciones originales de otros proyectos, música increíble y adelantos.
+                </p>
+            </div>
+            <a href="https://www.youtube.com/@Gooseworx" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #333333; border-color: #444444;">Canal de Gooseworx 🌟</a>
+        </div>
 
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-<a href="/pages/juegos">Juegos</a>
-
-<a href="/pages/fanarts">Fanarts</a>
-
-<a href="/pages/redes">Redes</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/tadc/banner.jpg') }}">
-<!-- Reemplazar por el banner -->
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/tadc">
-
-Inicio
-
-</a>
-
-<a href="/series/tadc/redes" class="activo">
-
-Redes oficiales
-
-</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Redes oficiales</h1>
-
-<div class="card">
-
-<h2>Sitio web oficial</h2>
-
-<p>
-
-<a href="#">
-
-(Agregar enlace al sitio oficial, si existe)
-
-</a>
-
-</p>
-
-</div>
-
-<hr>
-
-<div class="card">
-
-<h2>YouTube</h2>
-
-<p>
-
-<a href="#">
-
-(Agregar enlace al canal oficial de GLITCH Productions o de la serie)
-
-</a>
-
-</p>
-
-</div>
-
-<hr>
-
-<div class="card">
-
-<h2>X (Twitter)</h2>
-
-<p>
-
-<a href="#">
-
-(Agregar enlace al perfil oficial)
-
-</a>
-
-</p>
-
-</div>
-
-<hr>
-
-<div class="card">
-
-<h2>Instagram</h2>
-
-<p>
-
-<a href="#">
-
-(Agregar enlace al perfil oficial)
-
-</a>
-
-</p>
-
-</div>
-
-<hr>
-
-<div class="card">
-
-<h2>TikTok</h2>
-
-<p>
-
-<a href="#">
-
-(Agregar enlace al perfil oficial)
-
-</a>
-
-</p>
-
-</div>
-
-<hr>
-
-<div class="card">
-
-<h2>Otras redes</h2>
-
-<p>
-
-(Agregar cualquier otra red oficial que corresponda)
-
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

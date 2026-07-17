@@ -1,189 +1,91 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Curiosidades | The Amazing Digital Circus{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-    <meta charset="UTF-8">
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/e083e388-dff1-45ef-9900-656143f8ec4c/digital-circus-wide.jpg" alt="Digital Circus Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
+        <a href="{{ url_for('tadc') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('tadc_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('tadc_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('tadc_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('tadc_curiosidades') }}" style="text-decoration: none; color: #fff; background: #ff0055; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);">Curiosidades</a>
+        <a href="{{ url_for('tadc_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-    <title>Curiosidades | The Amazing Digital Circus</title>
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(255, 0, 128, 0.5); color: #ff0055; margin-top: 30px; font-weight: 800;">
+        SECRETOS Y CURIOSIDADES 💡
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Descubre los misterios ocultos, referencias de culto y secretos de producción del circo.</p>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <div style="max-width: 950px; margin: 0 auto 60px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; text-align: left; padding: 0 15px;">
 
-</head>
-
-<body>
-
-    <header class="header">
-
-        <a href="/">
-
-            <img
-                src="https://static.wikia.nocookie.net/logopedia/images/3/3f/The_Amazing_Digital_Circus_logo.png/revision/latest?cb=20240419164235">
-            <!-- Reemplazar por el logo -->
-
-        </a>
-
-        <nav>
-
-            <a href="/pages/glitch">Glitch</a>
-
-            <a href="/pages/series">Series</a>
-
-            <a href="/pages/tienda">Tienda</a>
-
-            <a href="/pages/anuncios">Anuncios</a>
-
-            <a href="/pages/juegos">Juegos</a>
-
-            <a href="/pages/fanarts">Fanarts</a>
-
-            <a href="/pages/redes">Redes</a>
-
-        </nav>
-
-    </header>
-
-    <section class="banner">
-
-        <img
-            src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/e083e388-dff1-45ef-9900-656143f8ec4c/digital-circus-wide.jpg">
-        <!-- Reemplazar por el banner -->
-
-    </section>
-
-    <section class="submenu-serie">
-
-        <a href="/series/tadc">
-
-            Inicio
-
-        </a>
-
-        <a href="/series/tadc/curiosidades" class="activo">
-
-            Curiosidades
-
-        </a>
-
-    </section>
-
-    <section class="contenido">
-
-        <h1>Curiosidades</h1>
-
-        <div class="card">
-
-            <h2>Curiosidad</h2>
-
-            <p>La inspiración visual: El diseño de Ragatha rinde homenaje a la clásica muñeca de trapo Raggedy Ann,
-                mientras que la dinámica entre Jax y Pomni toma referencias del videojuego noventero Gobliiins
-                Las edades de los personajes: Aunque son prisioneros virtuales, tienen edades específicas en sus
-                historias: Pomni tiene 25 años, Ragatha 30, Kinger 48 y Jax 22.
-                Referencias de culto: La famosa escena de la cena al final del piloto es una clara recreación de La
-                última cena de Leonardo da Vinci, y las temáticas de los episodios suelen parodiar clásicos como Charlie
-                y la fábrica de chocolate.
-
-                (Escribir curiosidad)
-
-            </p>
-
+        <div class="card" style="border-color: #ff0055; padding: 25px; border-radius: 12px; background: #111115; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h2 style="border-left-color: #ff0055; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Ficha y Datos Curiosos</h2>
+                <ul style="list-style: disc; margin-left: 20px; color: #d1d1d6; font-size: 14px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;">
+                        <strong>Inspiración Visual:</strong> El diseño físico de <em>Ragatha</em> rinde tributo directo a la icónica muñeca de trapo clásica norteamericana <strong>Raggedy Ann</strong>.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>Edades del Elenco:</strong> Aunque tienen avatares infantiles o de juguete, sus edades humanas al entrar son: Pomni (25), Jax (22), Ragatha (30) y Kinger (48).
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>El Nombre "Circus":</strong> El concepto del circo familiar con toques siniestros tiene un guiño histórico al famoso hotel/casino de Las Vegas, <em>Circus Circus</em>, inaugurado en 1968.
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="card">
-
-            <h2>Dato curioso</h2>
-
-            <p>
-
-                Circus Circus fue propiedad originalmente de Jay Sarno y Stanley Mallin . Abrió sus puertas sin hotel el
-                18 de octubre de 1968. Contaba con un casino en la planta baja, mientras que la segunda planta albergaba
-                juegos de feria para niños. Circus Circus fue uno de los primeros casinos orientados a la familia en Las
-                Vegas.
-            </p>
-
+        <div class="card" style="border-color: #00d4ff; padding: 25px; border-radius: 12px; background: #111115; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h2 style="border-left-color: #00d4ff; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Grandes Influencias</h2>
+                <ul style="list-style: disc; margin-left: 20px; color: #d1d1d6; font-size: 14px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;">
+                        <strong>I Have No Mouth and I Must Scream:</strong> Es la influencia principal. El personaje de <em>Caine</em> refleja la omnipotencia de la malvada inteligencia artificial AM, controlando un entorno cerrado del que los humanos no pueden huir.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>El Laberinto de Oficinas:</strong> El pasillo infinito que Pomni cruza al abrir la puerta de salida "Exit" es un tributo interactivo al videojuego de culto meta-narrativo <strong>The Stanley Parable</strong>.
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="card">
-
-            <h2>Referencia</h2>
-
-            <p>
-                -"No tengo boca y debo gritar" (1967): Es la inspiración principal de la serie. La
-                historia trata sobre una inteligencia artificial maligna que tortura a los últimos humanos
-                sobrevivientes. El personaje de Caine funciona de manera similar a la IA (AM) del relato, controlando y
-                atormentando a los protagonistas atrapados.
-                -El Vacío: Las zonas sin renderizar en el circo recuerdan al
-                "Vacío" de El asombroso mundo de Gumball, el lugar donde van a parar los errores y los fallos del
-                mundo.
-                -The Stanley Parable: El momento en que Pomny abre la puerta de salida y se
-                pierde en un laberinto de oficinas enloquecedor es un homenaje directo a este famoso videojuego.Super
-                Mario
-                -Existen varias referencias visuales, como el diseño del techo del circo (similar al castillo
-                de la Princesa Peach) y el vómito oscuro de Pomny, animado igual que Metal Mario en dicho juego.
-                -El diseño y la personalidad empática y optimista de
-                Ragatha están directamente inspirados en esta famosa película musical animada de 1977.
-                -Toy Story 2: Las
-                escenas de pesadilla de algunos personajes, donde sus piezas intercambiables se desmoronan o son
-                arrastradas a la oscuridad, recuerdan a la famosa pesadilla de Woody.
-                -Más allá de las
-                referencias visuales, la serie utiliza la estética caótica y el humor absurdo para explorar temas
-                psicológicos profundos, como la identidad, el libre albedrío, la ansiedad y la alienación en la era
-                digital.
-
-            </p>
-
+        <div class="card" style="border-color: #00ffaa; padding: 25px; border-radius: 12px; background: #111115; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h2 style="border-left-color: #00ffaa; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Guiños Visuales de Culto</h2>
+                <ul style="list-style: disc; margin-left: 20px; color: #d1d1d6; font-size: 14px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;">
+                        <strong>La Última Cena:</strong> La disposición del banquete al final del episodio piloto es una recreación exacta de la famosísima pintura de Leonardo da Vinci.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>Super Mario 64:</strong> El techo estrellado del escenario del circo imita al del vestíbulo del castillo de Peach, y el vómito pixelado de Pomni imita texturas retro de los juegos de Nintendo 64.
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="card">
-
-            <h2>Detrás de escena</h2>
-
-            <p>
-
-                The Amazing Digital Circus revela un proceso de producción fascinante llevado a cabo por Glitch
-                Productions y la creadora Gooseworx, donde se priorizó un estilo visual retro que evoca a los años 90 y
-                un diseño de sonido intencionalmente incómodo.
-
-            </p>
-
+        <div class="card" style="border-color: #bb00ff; padding: 25px; border-radius: 12px; background: #111115; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h2 style="border-left-color: #bb00ff; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Mensaje y Producción</h2>
+                <ul style="list-style: disc; margin-left: 20px; color: #d1d1d6; font-size: 14px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;">
+                        <strong>Diseño de Sonido Incómodo:</strong> Gooseworx trabajó arduamente en un apartado sonoro repleto de silencios repentinos e instrumentos de juguete desafinados para acrecentar la sensación de claustrofobia.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>Lección de Vida:</strong> A través de la caída de Pomni en la desesperación, la serie explora el peligro del escapismo digital extremo y la importancia de lidiar con nuestros traumas del mundo real en vez de evadirlos.
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="card">
-
-            <h2>Enseñanza</h2>
-
-            <p>
-
-                The Amazing Digital Circus enseña sobre los peligros del escapismo y la importancia de aceptar la
-                realidad. A través de las vivencias de Pomni y el resto del elenco, la serie muestra que evadir el dolor
-                y los traumas refugiándose en mundos de fantasía es una trampa que no resuelve los problemas.
-            </p>
-
-        </div>
-
-    </section>
-
-    <footer>
-
-        <p>
-
-            Proyecto realizado por Moon y Yammy ©2026
-
-        </p>
-
-    </footer>
-
-</body>
-
-</html>
+    </div>
+</section>
+{% endblock %}

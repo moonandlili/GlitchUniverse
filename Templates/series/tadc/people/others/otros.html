@@ -1,158 +1,52 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/e083e388-dff1-45ef-9900-656143f8ec4c/digital-circus-wide.jpg" alt="Otros Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<head>
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(255, 0, 85, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.1);" onmouseover="this.style.background='#ff0055'; this.style.boxShadow='0 0 15px rgba(255, 0, 85, 0.4)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.boxShadow='0 0 10px rgba(255, 0, 85, 0.1)'">
+            ← Volver a Participantes
+        </a>
+    </div>
 
-<meta charset="UTF-8">
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(241, 196, 15, 0.5); color: #f1c40f; margin-bottom: 20px; font-weight: 800; text-transform: uppercase;">
+        Otros Colaboradores
+    </h1>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <p style="font-size: 16px; color: #a1a1a6; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6;">
+        Detrás del increíble apartado visual y sonoro de la serie, se encuentra un talentoso equipo de animadores, artistas 3D y diseñadores de audio que le dan vida al caótico entorno del circo digital.
+    </p>
 
-<title>Otros participantes | The Amazing Digital Circus</title>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-bottom: 50px;">
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <div class="other-card" style="background: #111115; border-radius: 12px; border-left: 4px solid #f1c40f; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: left;">
+            <h3 style="color: #fff; margin: 0 0 5px 0; font-size: 18px; font-weight: 700;">Diseño y Postproducción de Audio</h3>
+            <p style="color: #f1c40f; margin: 0 0 10px 0; font-size: 12px; font-weight: 600; text-transform: uppercase;">Efectos y Ambientación</p>
+            <p style="color: #a1a1a6; margin: 0; font-size: 13px; line-height: 1.4;">
+                Responsables de crear la icónica biblioteca de efectos caricaturescos, desde los rebotes de Pomni hasta los glitches de sonido y ruidos surrealistas del entorno del circo.
+            </p>
+        </div>
 
-</head>
+        <div class="other-card" style="background: #111115; border-radius: 12px; border-left: 4px solid #f1c40f; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: left;">
+            <h3 style="color: #fff; margin: 0 0 5px 0; font-size: 18px; font-weight: 700;">Animadores 3D y Riggers</h3>
+            <p style="color: #f1c40f; margin: 0 0 10px 0; font-size: 12px; font-weight: 600; text-transform: uppercase;">Modelado y Movimiento</p>
+            <p style="color: #a1a1a6; margin: 0; font-size: 13px; line-height: 1.4;">
+                Especialistas que construyen los "esqueletos digitales" de cada personaje y articulan sus expresivos e histriónicos movimientos en un entorno tridimensional de estilo retro.
+            </p>
+        </div>
 
-<body>
+        <div class="other-card" style="background: #111115; border-radius: 12px; border-left: 4px solid #f1c40f; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: left;">
+            <h3 style="color: #fff; margin: 0 0 5px 0; font-size: 18px; font-weight: 700;">Artistas Conceptuales</h3>
+            <p style="color: #f1c40f; margin: 0 0 10px 0; font-size: 12px; font-weight: 600; text-transform: uppercase;">Diseño Visual y Storyboard</p>
+            <p style="color: #a1a1a6; margin: 0; font-size: 13px; line-height: 1.4;">
+                Quienes se encargan de plasmar en papel las locas ideas de Gooseworx para definir la paleta de colores, los extraños escenarios del circo y los storyboards de cada escena.
+            </p>
+        </div>
 
-<header class="header">
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-<!-- Reemplazar por el logo -->
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-<a href="/pages/juegos">Juegos</a>
-
-<a href="/pages/fanarts">Fanarts</a>
-
-<a href="/pages/redes">Redes</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/tadc/banner.jpg') }}">
-<!-- Reemplazar por el banner -->
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/tadc/people">
-
-← Volver a Participantes
-
-</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Otros participantes</h1>
-
-<div class="persona">
-
-<img src="{{ url_for('static', filename='img/people/tadc/others/persona1.png') }}">
-<!-- Reemplazar por la imagen -->
-
-<h2>(Nombre)</h2>
-
-<p>
-
-<strong>Cargo:</strong>
-
-(Escribir el cargo)
-
-</p>
-
-<p>
-
-<strong>Información:</strong>
-
-(Escribir información)
-
-</p>
-
-<p>
-
-<strong>Redes sociales:</strong>
-
-</p>
-
-<ul>
-
-<li><a href="#">(Agregar enlace a X/Twitter)</a></li>
-
-<li><a href="#">(Agregar enlace a Instagram)</a></li>
-
-<li><a href="#">(Agregar enlace a YouTube)</a></li>
-
-<li><a href="#">(Agregar otra red oficial)</a></li>
-
-</ul>
-
-</div>
-
-<hr>
-
-<div class="persona">
-
-<img src="{{ url_for('static', filename='img/people/tadc/others/persona2.png') }}">
-
-<h2>(Nombre)</h2>
-
-<p><strong>Cargo:</strong> (Escribir el cargo)</p>
-
-<p><strong>Información:</strong> (Escribir información)</p>
-
-<p><strong>Redes sociales:</strong></p>
-
-<ul>
-
-<li><a href="#">(Agregar enlace)</a></li>
-
-<li><a href="#">(Agregar enlace)</a></li>
-
-<li><a href="#">(Agregar enlace)</a></li>
-
-<li><a href="#">(Agregar enlace)</a></li>
-
-</ul>
-
-</div>
-
-<hr>
-
-<!-- Repetir este bloque para todos los demás participantes -->
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

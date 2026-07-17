@@ -1,89 +1,32 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Fanarts | Glitch Productions{% endblock %}
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Fanarts | Glitch Productions</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header>
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
+{% block content %}
 <section class="contenido">
+    <h1>Comunidad de Fanarts</h1>
+    <p>
+        Una galería dedicada exclusivamente a las increíbles ilustraciones realizadas por la talentosa comunidad de Glitch.
+    </p>
 
-<h1>Fanarts</h1>
+    <div class="cards">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/fanarts/tadc/fanart1.png') }}" alt="Fanart The Amazing Digital Circus">
+            <h3>The Amazing Digital Circus</h3>
+            <p>Artista: Comunidad</p>
+        </div>
 
-<p>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/fanarts/murder_drones/fanart1.png') }}" alt="Fanart Murder Drones">
+            <h3>Murder Drones</h3>
+            <p>Artista: Comunidad</p>
+        </div>
 
-Galería dedicada a ilustraciones realizadas por la comunidad.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/fanarts/fanart1.jpg') }}">
-
-<p>(Autor)</p>
-
-</div>
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/fanarts/fanart2.jpg') }}">
-
-<p>(Autor)</p>
-
-</div>
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/fanarts/fanart3.jpg') }}">
-
-<p>(Autor)</p>
-
-</div>
-
-</div>
-
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/fanarts/meta_runner/fanart1.png') }}" alt="Fanart Meta Runner">
+            <h3>Meta Runner</h3>
+            <p>Artista: Comunidad</p>
+        </div>
+    </div>
 </section>
-
-<footer>
-
-<p>Proyecto realizado por Moon y Yammy ©2026</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

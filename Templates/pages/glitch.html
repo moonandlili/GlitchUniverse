@@ -1,118 +1,50 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Sobre Glitch | Glitch Productions{% endblock %}
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Glitch Productions</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header>
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch" class="activo">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
+{% block content %}
 <section class="contenido">
+    <h1>Glitch Productions</h1>
+    
+    <img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="Glitch Productions Logo" style="width: 300px; margin: 0 auto 40px auto; display: block;">
 
-<h1>Glitch Productions</h1>
+    <h2>¿Qué es Glitch Productions?</h2>
+    <p>
+        Glitch Productions es un estudio de animación independiente con sede en Sídney, Australia. Se han ganado el corazón de millones de fans en todo el mundo gracias a su enfoque en crear series animadas en 3D originales, oscuras, divertidas y llenas de personalidad, distribuidas de forma gratuita en YouTube. Su misión es demostrar que la animación independiente puede competir al más alto nivel.
+    </p>
 
-<img src="{{ url_for('static', filename='img/glitch/logo.png') }}">
-<!-- Reemplazar por el logo de Glitch -->
+    <h2>Fundadores</h2>
+    <p>
+        El estudio fue creado por dos hermanos apasionados por la creación de contenido, la animación y los videojuegos:
+    </p>
+    <ul style="list-style: disc; margin-left: 20px; margin-bottom: 30px; color: #a1a1a6;">
+        <li><strong>Kevin Lerdwichagul</strong> (CEO y Productor Ejecutivo)</li>
+        <li><strong>Luke Lerdwichagul</strong> (CCO, Director y creador original de SMG4)</li>
+    </ul>
 
-<h2>¿Qué es Glitch Productions?</h2>
-
-<p>
-
-(Escribir una breve historia del estudio.)
-
-</p>
-
-<h2>Fundadores</h2>
-
-<ul>
-
-<li>(Fundador 1)</li>
-
-<li>(Fundador 2)</li>
-
-</ul>
-
-<h2>Información general</h2>
-
-<table>
-
-<tr>
-
-<th>Fundación</th>
-
-<td>(Completar)</td>
-
-</tr>
-
-<tr>
-
-<th>País</th>
-
-<td>Australia</td>
-
-</tr>
-
-<tr>
-
-<th>Sitio web</th>
-
-<td>(Completar)</td>
-
-</tr>
-
-<tr>
-
-<th>Canal de YouTube</th>
-
-<td>(Completar)</td>
-
-</tr>
-
-</table>
-
+    <h2>Información General</h2>
+    
+    <table style="width: 100%; max-width: 600px; border-collapse: collapse; margin-top: 20px; background: #111115; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <tr style="border-bottom: 1px solid #22222a;">
+            <th style="padding: 15px; text-align: left; color: #00d4ff; background: #16161a; width: 40%;">Fundación</th>
+            <td style="padding: 15px; color: #f5f5f7;">2017</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #22222a;">
+            <th style="padding: 15px; text-align: left; color: #00d4ff; background: #16161a;">País</th>
+            <td style="padding: 15px; color: #f5f5f7;">Australia</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #22222a;">
+            <th style="padding: 15px; text-align: left; color: #00d4ff; background: #16161a;">Sitio Web</th>
+            <td style="padding: 15px;">
+                <a href="https://www.glitchprod.com/" target="_blank" style="color: #a1a1a6; text-decoration: underline;">glitchprod.com</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="padding: 15px; text-align: left; color: #00d4ff; background: #16161a;">Canal de YouTube</th>
+            <td style="padding: 15px;">
+                <a href="https://www.youtube.com/@GLITCH" target="_blank" style="color: #a1a1a6; text-decoration: underline;">@GLITCH</a>
+            </td>
+        </tr>
+    </table>
 </section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

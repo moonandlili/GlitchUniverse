@@ -1,158 +1,58 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/e083e388-dff1-45ef-9900-656143f8ec4c/digital-circus-wide.jpg" alt="Productores Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<head>
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(255, 0, 85, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.1);" onmouseover="this.style.background='#ff0055'; this.style.boxShadow='0 0 15px rgba(255, 0, 85, 0.4)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.boxShadow='0 0 10px rgba(255, 0, 85, 0.1)'">
+            ← Volver a Participantes
+        </a>
+    </div>
 
-<meta charset="UTF-8">
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(0, 255, 170, 0.5); color: #00ffaa; margin-bottom: 20px; font-weight: 800; text-transform: uppercase;">
+        Productores Executivos
+    </h1>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <p style="font-size: 16px; color: #a1a1a6; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6;">
+        Conoce a las mentes maestras de Glitch Productions que lideran el financiamiento, la logística y la distribución global para que el circo digital llegue a millones de pantallas.
+    </p>
 
-<title>Productores | The Amazing Digital Circus</title>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px;">
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <div class="prod-card" style="background: #111115; border-radius: 16px; border-left: 4px solid #00ffaa; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                    <img src="{{ url_for('static', filename='img/people/tadc/kevin_lerdwichagul.png') }}" alt="Kevin Lerdwichagul" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid #00ffaa;">
+                    <div>
+                        <h2 style="font-size: 20px; color: #fff; margin: 0; font-weight: 700;">Kevin Lerdwichagul</h2>
+                        <p style="color: #00ffaa; margin: 0; font-size: 13px; font-weight: 600; text-transform: uppercase;">CEO y Productor Ejecutivo</p>
+                    </div>
+                </div>
+                <p style="font-size: 14px; color: #a1a1a6; line-height: 1.5; margin: 0;">
+                    Cofundador de Glitch Productions. Kevin se encarga de la gestión empresarial, la dirección estratégica del estudio y de asegurar los recursos y la logística necesarios para que producciones masivas como *The Amazing Digital Circus* mantengan su altísima calidad técnica y artística.
+                </p>
+            </div>
+        </div>
 
-</head>
+        <div class="prod-card" style="background: #111115; border-radius: 16px; border-left: 4px solid #00ffaa; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                    <img src="{{ url_for('static', filename='img/people/tadc/luke_lerdwichagul.png') }}" alt="Luke Lerdwichagul" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid #00ffaa;">
+                    <div>
+                        <h2 style="font-size: 20px; color: #fff; margin: 0; font-weight: 700;">Luke Lerdwichagul</h2>
+                        <p style="color: #00ffaa; margin: 0; font-size: 13px; font-weight: 600; text-transform: uppercase;">Director Creativo de Glitch</p>
+                    </div>
+                </div>
+                <p style="font-size: 14px; color: #a1a1a6; line-height: 1.5; margin: 0;">
+                    También conocido como "SMG4" en YouTube. Junto a su hermano Kevin, fundó Glitch para impulsar la animación independiente en internet. Actúa como consultor creativo sénior y productor ejecutivo de la serie, garantizando que el humor absurdo y la esencia indie del proyecto se mantengan intactos.
+                </p>
+            </div>
+        </div>
 
-<body>
-
-<header class="header">
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-<!-- Reemplazar por el logo -->
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-<a href="/pages/juegos">Juegos</a>
-
-<a href="/pages/fanarts">Fanarts</a>
-
-<a href="/pages/redes">Redes</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/tadc/banner.jpg') }}">
-<!-- Reemplazar por el banner -->
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/tadc/people">
-
-← Volver a Participantes
-
-</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Productores</h1>
-
-<div class="persona">
-
-<img src="{{ url_for('static', filename='img/people/tadc/producers/productor1.png') }}">
-<!-- Reemplazar por la imagen -->
-
-<h2>(Nombre)</h2>
-
-<p>
-
-<strong>Cargo:</strong>
-
-(Productor/Productora)
-
-</p>
-
-<p>
-
-<strong>Información:</strong>
-
-(Escribir información del productor o productora)
-
-</p>
-
-<p>
-
-<strong>Redes sociales:</strong>
-
-</p>
-
-<ul>
-
-<li><a href="#">(Agregar enlace a X/Twitter)</a></li>
-
-<li><a href="#">(Agregar enlace a Instagram)</a></li>
-
-<li><a href="#">(Agregar enlace a YouTube)</a></li>
-
-<li><a href="#">(Agregar otra red oficial)</a></li>
-
-</ul>
-
-</div>
-
-<hr>
-
-<div class="persona">
-
-<img src="{{ url_for('static', filename='img/people/tadc/producers/productor2.png') }}">
-
-<h2>(Nombre)</h2>
-
-<p><strong>Cargo:</strong> (Productor/Productora)</p>
-
-<p><strong>Información:</strong> (Escribir información del productor o productora)</p>
-
-<p><strong>Redes sociales:</strong></p>
-
-<ul>
-
-<li><a href="#">(Agregar enlace)</a></li>
-
-<li><a href="#">(Agregar enlace)</a></li>
-
-<li><a href="#">(Agregar enlace)</a></li>
-
-<li><a href="#">(Agregar enlace)</a></li>
-
-</ul>
-
-</div>
-
-<hr>
-
-<!-- Repetir este bloque para todos los productores -->
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

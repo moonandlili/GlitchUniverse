@@ -1,126 +1,60 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}The Amazing Digital Circus | Bienvenidos{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px;">
+    
+    <h1 style="font-size: 42px; text-shadow: 0 0 15px rgba(255, 0, 128, 0.6); color: #ff0055; margin-top: 20px; font-weight: 900; letter-spacing: 2px;">
+        THE AMAZING DIGITAL CIRCUS
+    </h1>
+    <p style="margin-bottom: 30px; color: #a1a1a6; font-size: 16px;">¡Bienvenido al show interactivo que nunca termina!</p>
 
-    <meta charset="UTF-8">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
+        <a href="{{ url_for('tadc') }}" style="text-decoration: none; color: #fff; background: #ff0055; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);">Inicio</a>
+        <a href="{{ url_for('tadc_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('tadc_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('tadc_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('tadc_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('tadc_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div style="max-width: 950px; margin: 40px auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; text-align: left;">
+        
+        <div class="card" style="border: 2px solid #ff0055; box-shadow: 0 0 20px rgba(255, 0, 85, 0.2); overflow: hidden; border-radius: 16px; background: #111;">
+            <img src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/1730571330813-EQKDQCVR00ON15TI212W/adc.jpg" alt="The Amazing Digital Circus Poster" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
 
-    <title>The Amazing Digital Circus</title>
+        <div>
+            <h2 style="border-left: 4px solid #ff0055; padding-left: 15px; font-size: 24px; text-transform: uppercase; margin-bottom: 15px; color: #fff;">¿Listo para perder la cabeza?</h2>
+            <p style="color: #d1d1d6; margin-bottom: 20px; font-size: 16px; line-height: 1.6;">
+                Sigue a Pomni, una chica que acaba de despertar atrapada en una colorida dimensión de juguete gobernada por una inteligencia artificial impredecible. Junto a sus nuevos y extravagantes compañeros, intentará mantener la cordura mientras busca la salida del asombroso circo digital.
+            </p>
+            <p style="color: #a1a1a6; font-size: 14px; line-height: 1.6;">
+                Usa el menú de arriba para ver la lista de capítulos oficiales, conocer a los actores de voz originales detrás de cada avatar en la sección de participantes, o escuchar los mejores temas de la banda sonora.
+            </p>
+        </div>
+    </div>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff0055, transparent); margin: 50px auto; max-width: 800px;">
 
-</head>
-
-<body>
-
-<header class="header">
-
-    <a href="/">
-
-        <img src="https://static.wikia.nocookie.net/logopedia/images/3/3f/The_Amazing_Digital_Circus_logo.png/revision/latest?cb=20240419164235" alt="Logo">
-        <!-- Reemplazar por el logo -->
-
-    </a>
-
-    <nav>
-
-        <a href="/pages/glitch">Glitch</a>
-
-        <a href="/pages/series">Series</a>
-
-        <a href="/pages/tienda">Tienda</a>
-
-        <a href="/pages/anuncios">Anuncios</a>
-
-        <a href="/pages/juegos">Juegos</a>
-
-        <a href="/pages/fanarts">Fanarts</a>
-
-        <a href="/pages/redes">Redes</a>
-
-    </nav>
-
-</header>
-
-<section class="banner">
-
-    <img src="https://i.pinimg.com/736x/b4/94/bf/b494bf4b67c9026f6bfb4ef6c8e0286e.jpg" alt="Banner">
-
-    <!-- Reemplazar por el banner -->
-
-</section>
-
-<section class="titulo">
-
-    <h1>The Amazing Digital Circus</h1>
-
-    <p>
-
-        Explora todo el contenido relacionado con la serie.
-
-    </p>
+    <div style="max-width: 800px; margin: 0 auto 50px auto; text-align: left;">
+        <h2 style="border-left: 4px solid #00d4ff; padding-left: 15px; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; text-align: center; color: #fff;">
+            Mira el Episodio Piloto Oficial
+        </h2>
+        
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 2px solid #22222a;">
+            <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                src="https://www.youtube.com/embed/HwAPLk_sQ3w" 
+                title="The Amazing Digital Circus Pilot" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
 
 </section>
-
-<section class="menu-serie">
-
-    <a href="/series/tadc/informacion">
-
-        Información
-
-    </a>
-
-    <a href="/series/tadc/capitulos">
-
-        Capítulos
-
-    </a>
-
-    <a href="/series/tadc/personajes">
-
-        Personajes
-
-    </a>
-
-    <a href="/series/tadc/people">
-
-        Participantes
-
-    </a>
-
-    <a href="/series/tadc/musica">
-
-        Música
-
-    </a>
-
-    <a href="/series/tadc/curiosidades">
-
-        Curiosidades
-
-    </a>
-
-    <a href="/series/tadc/redes">
-
-        Redes oficiales
-
-    </a>
-
-</section>
-
-<footer>
-
-    <p>
-
-        Proyecto realizado por Moon y Yammy ©2026
-
-    </p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

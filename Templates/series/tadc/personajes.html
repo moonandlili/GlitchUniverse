@@ -1,202 +1,112 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Personajes | The Amazing Digital Circus{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-    <meta charset="UTF-8">
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe9d9ec-ccf0-4fa0-abe1-cf45eaadb01e/dhpot1b-675cdc7d-9f08-44a2-8c14-c22566ae2d0a.png/v1/fill/w_1280,h_720,q_80,strp/this_is_the_the_amazing_digital_circus_logo_by_molly211111_dhpot1b-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2FmZTlkOWVjLWNjZjAtNGZhMC1hYmUxLWNmNDVlYWFkYjAxZS9kaHBvdDFiLTY3NWNkYzdkLTlmODgtNDRhMi04YzE0LWMyMjU2NmFlMmQwYS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xp-laYuqgJIXAwLcyC8rCMhvPOdhjXn7DYqZqPE1IgM" alt="Digital Circus Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
+        <a href="{{ url_for('tadc') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('tadc_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('tadc_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #fff; background: #ff0055; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);">Personajes</a>
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('tadc_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('tadc_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('tadc_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-    <title>Personajes | The Amazing Digital Circus</title>
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(255, 0, 128, 0.5); color: #ff0055; margin-top: 30px; font-weight: 800;">
+        ELENCO DE PERSONAJES
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Selecciona a cualquiera de los atrapados para explorar su biografía y ficha detallada.</p>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; max-width: 1000px; margin: 0 auto 60px auto; padding: 0 15px;">
 
-</head>
+        <a href="{{ url_for('pomni') }}" style="text-decoration: none;">
+            <div class="card" style="border-color: #ff0055; transition: transform 0.3s, box-shadow 0.3s; height: 100%;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a;">
+                    <img src="https://static.wikia.nocookie.net/tadc/images/4/4d/PomniNervousSmile01.png" alt="Pomni" style="width: 100%; height: auto; display: block;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Pomni</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">La bufón ansiosa recién llegada</p>
+            </div>
+        </a>
 
-<body>
+        <a href="{{ url_for('jax') }}" style="text-decoration: none;">
+            <div class="card" style="border-color: #bb00ff; transition: transform 0.3s, box-shadow 0.3s; height: 100%;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a;">
+                    <img src="https://static.wikia.nocookie.net/tadc/images/a/ad/Jax%27s_room_icon.png/revision/latest?cb=20231114233542" alt="Jax" style="width: 100%; height: auto; display: block;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Jax</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">El conejo bromista y sarcástico</p>
+            </div>
+        </a>
 
-<header class="header">
+        <a href="{{ url_for('ragatha') }}" style="text-decoration: none;">
+            <div class="card" style="border-color: #ff3300; transition: transform 0.3s, box-shadow 0.3s; height: 100%;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a;">
+                    <img src="https://static.wikia.nocookie.net/tadc/images/5/55/2DRagatha.png/revision/latest/scale-to-width-down/250?cb=20241004061012&path-prefix=es" alt="Ragatha" style="width: 100%; height: auto; display: block;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Ragatha</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">La muñeca optimista y empática</p>
+            </div>
+        </a>
 
-    <a href="/">
+        <a href="{{ url_for('gangle') }}" style="text-decoration: none;">
+            <div class="card" style="border-color: #ff00bb; transition: transform 0.3s, box-shadow 0.3s; height: 100%;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a;">
+                    <img src="{{ url_for('static', filename='img/characters/tadc/gangle.png') }}" alt="Gangle" style="width: 100%; height: auto; display: block;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Gangle</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">La cinta de las máscaras de comedia/drama</p>
+            </div>
+        </a>
 
-        <img src="https://static.wikia.nocookie.net/logopedia/images/3/3f/The_Amazing_Digital_Circus_logo.png/revision/latest?cb=20240419164235" alt="Logo">
+        <a href="{{ url_for('zooble') }}" style="text-decoration: none;">
+            <div class="card" style="border-color: #00ffaa; transition: transform 0.3s, box-shadow 0.3s; height: 100%;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a;">
+                    <img src="{{ url_for('static', filename='img/characters/tadc/zooble.png') }}" alt="Zooble" style="width: 100%; height: auto; display: block;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Zooble</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">El juguete de piezas intercambiables</p>
+            </div>
+        </a>
 
-        <!-- Reemplazar por el logo -->
+        <a href="{{ url_for('kinger') }}" style="text-decoration: none;">
+            <div class="card" style="border-color: #ffffff; transition: transform 0.3s, box-shadow 0.3s; height: 100%;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a;">
+                    <img src="{{ url_for('static', filename='img/characters/tadc/kinger.png') }}" alt="Kinger" style="width: 100%; height: auto; display: block;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Kinger</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">La pieza de ajedrez obsesiva</p>
+            </div>
+        </a>
 
-    </a>
+        <a href="{{ url_for('caine') }}" style="text-decoration: none;">
+            <div class="card" style="border-color: #ff0055; transition: transform 0.3s, box-shadow 0.3s; height: 100%;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a;">
+                    <img src="{{ url_for('static', filename='img/characters/tadc/caine.png') }}" alt="Caine" style="width: 100%; height: auto; display: block;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Caine</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">El excéntrico director de inteligencia artificial</p>
+            </div>
+        </a>
 
-    <nav>
+        <a href="{{ url_for('bubble') }}" style="text-decoration: none;">
+            <div class="card" style="border-color: #00d4ff; transition: transform 0.3s, box-shadow 0.3s; height: 100%;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a;">
+                    <img src="{{ url_for('static', filename='img/characters/tadc/bubble.png') }}" alt="Bubble" style="width: 100%; height: auto; display: block;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Bubble</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">La burbuja mascota parlante y caótica</p>
+            </div>
+        </a>
 
-        <a href="/pages/glitch">Glitch</a>
-
-        <a href="/pages/series">Series</a>
-
-        <a href="/pages/tienda">Tienda</a>
-
-        <a href="/pages/anuncios">Anuncios</a>
-
-        <a href="/pages/juegos">Juegos</a>
-
-        <a href="/pages/fanarts">Fanarts</a>
-
-        <a href="/pages/redes">Redes</a>
-
-    </nav>
-
-</header>
-
-<section class="banner">
-
-    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe9d9ec-ccf0-4fa0-abe1-cf45eaadb01e/dhpot1b-675cdc7d-9f08-44a2-8c14-c22566ae2d0a.png/v1/fill/w_1280,h_720,q_80,strp/this_is_the_the_amazing_digital_circus_logo_by_molly211111_dhpot1b-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2FmZTlkOWVjLWNjZjAtNGZhMC1hYmUxLWNmNDVlYWFkYjAxZS9kaHBvdDFiLTY3NWNkYzdkLTlmMDgtNDRhMi04YzE0LWMyMjU2NmFlMmQwYS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xp-laYuqgJIXAwLcyC8rCMhvPOdhjXn7DYqZqPE1IgM" alt="Banner">
-
-    <!-- Reemplazar por el banner -->
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-    <a href="/series/tadc">Inicio</a>
-
-    <a href="/series/tadc/informacion">Información</a>
-
-    <a href="/series/tadc/capitulos">Capítulos</a>
-
-    <a href="/series/tadc/personajes" class="activo">Personajes</a>
-
-    <a href="/series/tadc/people">Participantes</a>
-
-    <a href="/series/tadc/musica">Música</a>
-
-    <a href="/series/tadc/curiosidades">Curiosidades</a>
-
-    <a href="/series/tadc/redes">Redes oficiales</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Personajes</h1>
-
-<p>
-
-Selecciona un personaje para ver su información.
-
-</p>
-
-<div class="cards">
-
-<a href="/series/tadc/characters/pomni">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/pomni.png') }}">
-<!-- Reemplazar por la imagen -->
-
-<h2>Pomni</h2>
-
-</div>
-
-</a>
-
-<a href="/series/tadc/characters/jax">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/jax.png') }}">
-
-<h2>Jax</h2>
-
-</div>
-
-</a>
-
-<a href="/series/tadc/characters/ragatha">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/ragatha.png') }}">
-
-<h2>Ragatha</h2>
-
-</div>
-
-</a>
-
-<a href="/series/tadc/characters/gangle">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/gangle.png') }}">
-
-<h2>Gangle</h2>
-
-</div>
-
-</a>
-
-<a href="/series/tadc/characters/zooble">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/zooble.png') }}">
-
-<h2>Zooble</h2>
-
-</div>
-
-</a>
-
-<a href="/series/tadc/characters/kinger">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/kinger.png') }}">
-
-<h2>Kinger</h2>
-
-</div>
-
-</a>
-
-<a href="/series/tadc/characters/caine">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/caine.png') }}">
-
-<h2>Caine</h2>
-
-</div>
-
-</a>
-
-<a href="/series/tadc/characters/bubble">
-
-<div class="card">
-
-<img src="{{ url_for('static', filename='img/characters/tadc/bubble.png') }}">
-
-<h2>Bubble</h2>
-
-</div>
-
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

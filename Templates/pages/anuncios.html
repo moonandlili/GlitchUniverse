@@ -1,99 +1,36 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Anuncios y Novedades | Glitch Productions{% endblock %}
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Anuncios | Glitch Productions</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header>
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios" class="activo">Anuncios</a>
-
-</nav>
-
-</header>
-
+{% block content %}
 <section class="contenido">
+    <h1>Anuncios y Novedades</h1>
+    <p>
+        Mantente al día con los últimos comunicados, lanzamientos y novedades del Universo de Glitch Productions.
+    </p>
 
-<h1>Anuncios</h1>
+    <div class="news-container" style="margin-top: 40px;">
+        
+        <div class="news-card">
+            <img src="{{ url_for('static', filename='img/banners/news1.png') }}" alt="Novedades de The Amazing Digital Circus">
+            <h3>¡The Amazing Digital Circus sigue rompiendo récords!</h3>
+            <p>
+                El fenómeno global de Caine, Pomni y compañía continúa sumando millones de vistas. No te pierdas los detalles de producción de los próximos episodios que el equipo está preparando.
+            </p>
+            <span style="color: #666; font-size: 13px; display: block; margin-bottom: 15px;">Publicado: Julio 2026</span>
+            <a href="https://www.youtube.com/@GLITCH" target="_blank">Ver video en YouTube</a>
+        </div>
 
-<p>
+        <div class="news-card">
+            <img src="{{ url_for('static', filename='img/banners/news2.png') }}" alt="Final de Murder Drones">
+            <h3>El espectacular desenlace de Murder Drones</h3>
+            <p>
+                La épica travesía de Uzi y N llegó a su fin en un capítulo cargado de acción que dejó a toda la comunidad con la boca abierta. Mira el detrás de escenas oficial ya disponible.
+            </p>
+            <span style="color: #666; font-size: 13px; display: block; margin-bottom: 15px;">Publicado: Julio 2026</span>
+            <a href="https://www.youtube.com/@GLITCH" target="_blank">Ver video en YouTube</a>
+        </div>
 
-Últimos anuncios y novedades de Glitch Productions.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>(Título del anuncio)</h3>
-
-<p>(Descripción breve)</p>
-
-<p>(Fecha)</p>
-
-</div>
-
-<div class="card">
-
-<h3>(Título del anuncio)</h3>
-
-<p>(Descripción breve)</p>
-
-<p>(Fecha)</p>
-
-</div>
-
-<div class="card">
-
-<h3>(Título del anuncio)</h3>
-
-<p>(Descripción breve)</p>
-
-<p>(Fecha)</p>
-
-</div>
-
-</div>
-
+    </div>
 </section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

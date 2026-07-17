@@ -1,164 +1,60 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Gangle | The Amazing Digital Circus</title>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-    <header class="header">
-
-        <a href="/">
-
-            <img
-                src="https://static.wikia.nocookie.net/logopedia/images/3/3f/The_Amazing_Digital_Circus_logo.png/revision/latest?cb=20240419164235">
-            <!-- Reemplazar por el logo -->
-
-        </a>
-
-        <nav>
-
-            <a href="/pages/glitch">Glitch</a>
-
-            <a href="/pages/series">Series</a>
-
-            <a href="/pages/tienda">Tienda</a>
-
-            <a href="/pages/anuncios">Anuncios</a>
-
-            <a href="/pages/juegos">Juegos</a>
-
-            <a href="/pages/fanarts">Fanarts</a>
-
-            <a href="/pages/redes">Redes</a>
-
-        </nav>
-
-    </header>
-
-    <section class="banner">
-
-        <img
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSOZVZsRpnSn3saHee4cVjBykl05ZrK1ERpKwAVq5MNZyr_6-q891-UobBQ1iamUw1Um574rDnGKfO_bol2OOpU0LtbBZfBP95jmekRx1cvojcUInhO4-KafYLUr-RrguXF3TIBXPX5RKLB-Fexq6uzENmRv2AEVvWzkq329Fx4KPhWoyZ4NjGGQ1lUCg-/w1200-h675-p-k-no-nu/tadc8.png">
-        <!-- Reemplazar por el banner -->
-
-    </section>
-
-    <section class="submenu-serie">
-
-        <a href="/series/tadc/personajes">
-
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(255, 85, 85, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 85, 85, 0.1);" onmouseover="this.style.background='#ff5555'; this.style.boxShadow='0 0 15px rgba(255, 85, 85, 0.4)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.boxShadow='0 0 10px rgba(255, 85, 85, 0.1)'">
             ← Volver a Personajes
-
         </a>
+    </div>
 
-    </section>
+    <div class="personaje-ficha" style="background: #111115; border-radius: 16px; border-left: 4px solid #ff5555; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: row; gap: 35px; align-items: flex-start; margin-bottom: 30px; flex-wrap: wrap;">
+        
+        <div style="flex-shrink: 0; text-align: center; margin: 0 auto 20px auto;">
+            <img src="https://static.wikia.nocookie.net/tadc/images/3/3d/Gangle_pose.png" alt="Gangle" style="width: 220px; height: 220px; border-radius: 16px; object-fit: contain; background: #1a1a24; border: 3px solid #ff5555; box-shadow: 0 0 20px rgba(255, 85, 85, 0.2);">
+        </div>
 
-    <section class="contenido">
+        <div style="flex-grow: 1; min-width: 280px;">
+            <h1 style="font-size: 36px; color: #fff; margin: 0 0 5px 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+                Gangle
+            </h1>
+            <p style="font-size: 16px; color: #ff5555; margin: 0 0 20px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                La Máscara de la Comedia y la Tragedia
+            </p>
+            
+            <p style="font-size: 15px; color: #a1a1a6; margin-bottom: 20px; line-height: 1.6;">
+                <strong>Gangle</strong> es un ser tímido y sumamente sensible hecho por completo de cintas rojas de plástico. Su rostro está definido por máscaras teatrales intercambiables que dictan su estado de ánimo. Casi todo el tiempo la vemos usando su máscara de tragedia, llorando por cualquier pequeña frustración, ya que su máscara de comedia es extremadamente frágil y Jax se la rompe constantemente por pura malicia.
+            </p>
 
-        <img src="{{ url_for('static', filename='img/characters/tadc/gangle.png') }}">
-        <!-- Reemplazar por la imagen -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 25px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #ff5555; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Especie</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Humana digitalizada / Cintas</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #ff5555; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Edad</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">26 años (Mental)</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #ff5555; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Voz en Inglés</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Marissa Lenti</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <h1>Gangle</h1>
+    <div style="background: #111115; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; margin-bottom: 50px; border: 1px solid rgba(255, 255, 255, 0.05);">
+        <h2 style="font-size: 22px; color: #fff; margin: 0 0 20px 0; font-weight: 700; border-bottom: 2px solid rgba(255, 85, 85, 0.3); padding-bottom: 10px;">
+            Curiosidades de Gangle
+        </h2>
+        <ul style="color: #a1a1a6; font-size: 15px; line-height: 1.8; margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong style="color: #ff5555;">Máscaras de repuesto:</strong> Gangle tiene un cajón lleno de máscaras de comedia de repuesto en su habitación, pero rara vez logra ponérselas o mantenerlas sanas debido a las constantes travesuras del circo.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #ff5555;">La verdadera personalidad:</strong> Su creadora, Gooseworx, mencionó que cuando Gangle tiene puesta la máscara de comedia es un personaje alegre, hiperactivo y sumamente dulce, lo opuesto al mar de lágrimas que vemos habitualmente.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #ff5555;">Fanática del Anime:</strong> Fuera de la serie principal, se ha revelado en materiales promocionales y notas de producción que le encantan los cómics y la animación de estilo oriental (anime).</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #ff5555;">Hecha de cinta:</strong> Al no tener un cuerpo físico sólido, es el personaje más liviano y flexible del show, lo que le permite estirarse o enredarse con facilidad según la situación.</li>
+        </ul>
+    </div>
 
-        <p>
-
-            <strong>Nombre:</strong>
-
-            Gangle
-
-        </p>
-
-        <p>
-
-            <strong>Primera aparición:</strong>
-
-            Primer episodio
-
-        </p>
-
-        <p>
-
-            <strong>Especie:</strong>
-
-            Humano
-            Máscara teatral antropomórfica (avatar digital)
-
-        </p>
-
-        <p>
-
-            <strong>Edad:</strong>
-
-            26 años
-        </p>
-
-        <p>
-
-            <strong>Personalidad:</strong>
-
-            Las emociones y el comportamiento de Gangle están influenciados por la máscara que lleva puesta. Sin
-            embargo, se revela que estas máscaras no cambian por completo su estado de ánimo, sino que son una forma
-            literal de " enmascaramiento " y no determinan por completo su personalidad.
-        </p>
-
-        <p>
-
-            <strong>Historia:</strong>
-
-            Antes de su llegada al Amazing Digital Circus, la contraparte de Gangle en la vida real, Zoey Raghavan ,
-            nacida el 22 de septiembre de 1991 , era una humana común y corriente con pasión por el anime. En un
-            momento dado, estudió diseño gráfico en un colegio comunitario, aunque luego lo abandonó por razones
-            desconocidas y no se dedicó mucho al arte después de eso, sino que trabajó en la industria de la comida
-            rápida como encargada de turno. Resultó herida en un accidente con un camión y fue hospitalizada.
-        </p>
-
-        <p>
-
-            <strong>Curiosidades:</strong>
-
-            Nombre: Su nombre es un juego de palabras que hace referencia a su cuerpo desgarbado y flexible.Diseño e
-            inspiración: Su rostro está basado en las tradicionales máscaras de teatro Sock and Buskin (comedia y
-            tragedia). En lugar de máscaras infinitas, solo posee dos: una feliz (comedia) y una llorosa (tragedia).Vida
-            pasada: Antes de quedar atrapada en el circo, su contraparte humana se llamaba Zoey Raghavan. Trabajaba como
-            gerente en un restaurante de comida rápida y soñaba con ser ilustradora de mangas.Personalidad Otaku: Le
-            encanta dibujar estilo anime y es una gran fanática de la serie Azumanga Daioh. ¡Incluso se ha confirmado
-            que tiene una almohada con un personaje impreso (dakimakura)!
-        </p>
-
-        <p>
-
-            <strong>Actor/Actriz de voz (original):</strong>
-
-            (Nombre)
-
-        </p>
-
-        <p>
-
-            <strong>Actor/Actriz de voz (español):</strong>
-
-            (Nombre)
-
-        </p>
-
-        <p>
-
-            <strong>Galería</strong>
-
-        </p>
-
-        <img src="{{ url_for('static', filename='img/characters/tadc/gangle/gallery1.jpg') }}">
-        <!-- Reemplazar por imagen -->
-
-        <img src="{{ url_for('static', filename='img
+</section>
+{% endblock %}

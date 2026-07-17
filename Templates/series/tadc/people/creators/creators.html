@@ -1,122 +1,46 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/e083e388-dff1-45ef-9900-656143f8ec4c/digital-circus-wide.jpg" alt="Creators Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<head>
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(255, 0, 85, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.1);" onmouseover="this.style.background='#ff0055'; this.style.boxShadow='0 0 15px rgba(255, 0, 85, 0.4)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.boxShadow='0 0 10px rgba(255, 0, 85, 0.1)'">
+            ← Volver a Participantes
+        </a>
+    </div>
 
-<meta charset="UTF-8">
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); color: #00d4ff; margin-bottom: 40px; font-weight: 800; text-transform: uppercase;">
+        Creadores
+    </h1>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="persona" style="background: #111115; border-radius: 16px; border-left: 4px solid #00d4ff; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: row; gap: 30px; align-items: flex-start; margin-bottom: 50px;">
+        
+        <div style="flex-shrink: 0; text-align: center;">
+            <img src="{{ url_for('static', filename='img/people/tadc/gooseworx.png') }}" alt="Gooseworx" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #00d4ff; box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);">
+        </div>
 
-<title>Creadores | The Amazing Digital Circus</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-<!-- Reemplazar por el logo -->
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-<a href="/pages/juegos">Juegos</a>
-
-<a href="/pages/fanarts">Fanarts</a>
-
-<a href="/pages/redes">Redes</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/tadc/banner.jpg') }}">
-<!-- Reemplazar por el banner -->
-
+        <div style="flex-grow: 1;">
+            <h2 style="font-size: 30px; color: #fff; margin: 0 0 15px 0; font-weight: 700;">Gooseworx</h2>
+            
+            <p style="font-size: 16px; color: #fff; margin-bottom: 12px; line-height: 1.6;">
+                <strong style="color: #00d4ff;">Rol:</strong> Creadora, Directora, Guionista y Compositora de *The Amazing Digital Circus*.
+            </p>
+            
+            <p style="font-size: 15px; color: #a1a1a6; margin-bottom: 25px; line-height: 1.6;">
+                <strong style="color: #00d4ff;">Biografía:</strong> Cooper Smith Goodwin, conocida en internet como <strong>Gooseworx</strong>, es una talentosa animadora, compositora y escritora estadounidense. Antes de su rotundo éxito con Glitch Productions al crear el piloto de *The Amazing Digital Circus*, ya era sumamente respetada por sus extrañas obras de animación independiente como *Duster* y *Little Runmo*, además de sus composiciones musicales absurdistas y surrealistas. En el show no solo es la mente maestra detrás de la historia, sino que compone gran parte de la emblemática banda sonora que acompaña el caos del circo.
+            </p>
+            
+            <p style="font-size: 15px; color: #fff; margin-bottom: 12px; font-weight: 600;">Redes Oficiales:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <a href="https://x.com/GooseworxMusic" target="_blank" style="text-decoration: none; color: #fff; background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 20px; font-size: 13px; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">X / Twitter</a>
+                <a href="https://www.youtube.com/@Gooseworx" target="_blank" style="text-decoration: none; color: #fff; background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 20px; font-size: 13px; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">YouTube</a>
+                <a href="https://gooseworx.tumblr.com" target="_blank" style="text-decoration: none; color: #fff; background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 20px; font-size: 13px; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">Tumblr</a>
+            </div>
+        </div>
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/tadc/people">← Volver a Participantes</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Creadores</h1>
-
-<div class="persona">
-
-<img src="{{ url_for('static', filename='img/people/tadc/gooseworx.png') }}">
-<!-- Reemplazar por la imagen -->
-
-<h2>Gooseworx</h2>
-
-<p>
-
-<strong>Rol:</strong>
-
-Creadora de The Amazing Digital Circus.
-
-</p>
-
-<p>
-
-<strong>Biografía:</strong>
-
-(Escribir información sobre Gooseworx)
-
-</p>
-
-<p>
-
-<strong>Redes sociales:</strong>
-
-</p>
-
-<ul>
-
-<li><a href="#">(Agregar enlace a X/Twitter)</a></li>
-
-<li><a href="#">(Agregar enlace a YouTube)</a></li>
-
-<li><a href="#">(Agregar enlace a Instagram si tiene)</a></li>
-
-<li><a href="#">(Agregar enlace a cualquier otra red oficial)</a></li>
-
-</ul>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

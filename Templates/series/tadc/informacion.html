@@ -1,201 +1,91 @@
-<!DOCTYPE html>
-
-<html lang="es">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Información | The Amazing Digital Circus</title>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-    <header class="header">
-
-        <a href="/">
-
-            <img src="https://static.wikia.nocookie.net/logopedia/images/3/3f/The_Amazing_Digital_Circus_logo.png/revision/latest?cb=20240419164235"
-                alt="Logo">
-
-            <!-- Reemplazar por el logo -->
-
-        </a>
-
-        <nav>
-
-            <a href="/pages/glitch">Glitch</a>
-
-            <a href="/pages/series">Series</a>
-
-            <a href="/pages/tienda">Tienda</a>
-
-            <a href="/pages/anuncios">Anuncios</a>
-
-            <a href="/pages/juegos">Juegos</a>
-
-            <a href="/pages/fanarts">Fanarts</a>
-
-            <a href="/pages/redes">Redes</a>
-
-        </nav>
-
-    </header>
-
-    <section class="banner">
-
-        <img src="https://i.pinimg.com/736x/b0/9b/59/b09b595a0831c495b9febc9509b19215.jpg" alt="Banner">
-
-        <!-- Reemplazar por el banner -->
-
-    </section>
-
-    <section class="submenu-serie">
-
-        <a href="/series/tadc">Inicio</a>
-
-        <a href="/series/tadc/informacion" class="activo">Información</a>
-
-        <a href="/series/tadc/capitulos">Capítulos</a>
-
-        <a href="/series/tadc/personajes">Personajes</a>
-
-        <a href="/series/tadc/people">Participantes</a>
-
-        <a href="/series/tadc/musica">Música</a>
-
-        <a href="/series/tadc/curiosidades">Curiosidades</a>
-
-        <a href="/series/tadc/redes">Redes oficiales</a>
-
-    </section>
-
-    <section class="contenido">
-
-        <h1>The Amazing Digital Circus</h1>
-
-        <img src="https://m.media-amazon.com/images/M/MV5BMTlkY2NjODgtOWI5ZC00MjIzLWFiYjItN2ZiOTU5YzA2ODlmXkEyXkFqcGc@._V1_.jpg"
-            alt="Póster">
-
-        <!-- Reemplazar por el póster -->
-
-        <h2>Sinopsis</h2>
-
-        <p>
-
-            Sigue a un grupo de humanos atrapados en un videojuego de realidad virtual, quienes deben lidiar con una
-            inteligencia artificial caótica llamada Caine y sus propios traumas, mientras buscan desesperadamente una
-            salida.
-
-        </p>
-
-        <h2>Información general</h2>
-
-        <table>
-
-            <tr>
-
-                <th>Título</th>
-
-                <td>The Amazing Digital Circus</td>
-
-            </tr>
-
-            <tr>
-
-                <th>Creadora</th>
-
-                <td>
-
-                    <a href="/series/tadc/people/creadores">
-
-                        Gooseworx
-
-                    </a>
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <th>Estreno</th>
-
-                <td>
-
-                    13 de octubre de 2023
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <th>Estado</th>
-
-                <td>
-
-                    Finalizado
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <th>Géneros</th>
-
-                <td>
-
-                    comedia oscura, horror psicológico y ciencia ficción.
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <th>Idioma original</th>
-
-                <td>
-
-                    Inglés
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <th>Productora</th>
-
-                <td>
-
-                    GLITCH Productions
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </section>
-
-    <footer>
-
-        <p>
-
-            Proyecto realizado por Moon y Yammy ©2026
-
-        </p>
-
-    </footer>
-
-</body>
-
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Información | The Amazing Digital Circus{% endblock %}
+
+{% block content %}
+<section class="contenido" style="text-align: center;">
+
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://i.pinimg.com/736x/b0/9b/59/b09b595a0831c495b9febc9509b19215.jpg" alt="Digital Circus Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
+        <a href="{{ url_for('tadc') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('tadc_informacion') }}" style="text-decoration: none; color: #fff; background: #ff0055; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);">Información</a>
+        <a href="{{ url_for('tadc_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('tadc_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('tadc_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('tadc_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
+
+    <div style="max-width: 950px; margin: 40px auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; text-align: left;">
+        
+        <div>
+            <div class="card" style="border-color: #ff0055; box-shadow: 0 0 20px rgba(255, 0, 85, 0.2); overflow: hidden; border-radius: 16px; margin-bottom: 30px;">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTlkY2NjODgtOWI5ZC00MjIzLWFiYjItN2ZiOTU5YzA2ODlmXkEyXkFqcGc@._V1_.jpg" alt="Póster Oficial" style="width: 100%; height: auto; display: block;">
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; background: #111115; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #ff0055; background: #16161a; width: 40%;">Título Original</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">The Amazing Digital Circus</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #ff0055; background: #16161a;">Creadora y Directora</th>
+                    <td style="padding: 12px 15px; font-size: 14px;">
+                        <a href="{{ url_for('tadc_creadores') }}" style="color: #00d4ff; text-decoration: underline;">Gooseworx</a>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #ff0055; background: #16161a;">Fecha de Estreno</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">13 de octubre de 2023</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #ff0055; background: #16161a;">Estado Actual</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">En emisión (Primera Temporada)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #ff0055; background: #16161a;">Géneros principales</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-style: italic; font-size: 14px;">Comedia oscura, horror psicológico, surrealismo, drama</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #ff0055; background: #16161a;">Idioma de origen</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">Inglés (con doblajes oficiales)</td>
+                </tr>
+                <tr>
+                    <th style="padding: 12px 15px; text-align: left; color: #ff0055; background: #16161a;">Estudio de Animación</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">GLITCH Productions</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h2 style="border-left-color: #ff0055; font-size: 24px; text-transform: uppercase; margin-bottom: 15px;">Sinopsis Oficial</h2>
+            <p style="color: #d1d1d6; margin-bottom: 25px; font-size: 16px; line-height: 1.6;">
+                Sigue a un grupo de humanos atrapados en un videojuego de realidad virtual, quienes deben lidiar con una inteligencia artificial caótica llamada Caine y sus propios traumas, mientras buscan desesperadamente una salida que parece no existir. Al colocarse el visor, sus cuerpos físicos desaparecen y son transformados en avatares caricaturescos dentro de un colorido pero aterrador circo digital. Si su cordura llega al límite, se transforman de manera irreversible en monstruos sin mente llamados "abstracciones".
+            </p>
+
+            <h2 style="border-left-color: #ff0055; font-size: 24px; text-transform: uppercase; margin-bottom: 15px;">Estilo Visual e Inspiraciones</h2>
+            <p style="color: #d1d1d6; margin-bottom: 25px; font-size: 15px; line-height: 1.6;">
+                La serie destaca por su particular estilo estético que emula los videojuegos interactivos de finales de los años 90 y principios de los 2000 (época de la Nintendo 64 y la PlayStation 1), mezclado con el aspecto colorido de los programas de televisión educativos para niños de edad preescolar. 
+            </p>
+            <p style="color: #d1d1d6; margin-bottom: 25px; font-size: 15px; line-height: 1.6;">
+                Su creadora, <strong>Gooseworx</strong>, ha mencionado que las principales fuentes de inspiración para la atmósfera oscura y psicológica del show incluyen el famoso relato corto de ciencia ficción apocalíptica <em>"I Have No Mouth, and I Must Scream"</em> de Harlan Ellison, y el característico humor absurdo de series animadas clásicas.
+            </p>
+
+            <h2 style="border-left-color: #ff0055; font-size: 24px; text-transform: uppercase; margin-bottom: 15px;">Un Fenómeno Global Histórico</h2>
+            <p style="color: #d1d1d6; margin-bottom: 15px; font-size: 15px; line-height: 1.6;">
+                El episodio piloto, estrenado en YouTube en octubre de 2023, se convirtió inmediatamente en uno de los eventos de animación independiente más grandes en la historia de internet:
+            </p>
+            <ul style="list-style: disc; margin-left: 20px; color: #a1a1a6; font-size: 14px; line-height: 1.8; margin-bottom: 25px;">
+                <li>Logró superar las <strong>150 millones de vistas</strong> en su primer mes de publicación.</li>
+                <li>Se convirtió en una tendencia masiva en redes sociales como TikTok, X y Reddit, generando miles de fanarts, teorías y canciones creadas por la comunidad.</li>
+                <li>Demostró que la animación independiente en plataformas gratuitas puede competir directamente en calidad, presupuesto y audiencia con las grandes cadenas de televisión y plataformas de streaming tradicionales.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/e083e388-dff1-45ef-9900-656143f8ec4c/digital-circus-wide.jpg" alt="Doblaje Latino Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
+
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(255, 0, 85, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.1);" onmouseover="this.style.background='#ff0055'; this.style.boxShadow='0 0 15px rgba(255, 0, 85, 0.4)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.boxShadow='0 0 10px rgba(255, 0, 85, 0.1)'">
+            ← Volver a Participantes
+        </a>
+    </div>
+
+    <div class="persona" style="background: #111115; border-radius: 16px; border-left: 4px solid #00d4ff; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: row; gap: 30px; align-items: flex-start; margin-bottom: 50px;">
+        
+        <div style="flex-shrink: 0; text-align: center;">
+            <img src="{{ url_for('static', filename='img/people/tadc/noelia_lestani.png') }}" alt="Noelia Lestani" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #00d4ff; box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);">
+        </div>
+
+        <div style="flex-grow: 1;">
+            <h2 style="font-size: 30px; color: #fff; margin: 0 0 5px 0; font-weight: 700;">Noelia Lestani</h2>
+            <p style="color: #00d4ff; margin: 0 0 15px 0; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Voz de Pomni (Español Latino)</p>
+            
+            <p style="font-size: 15px; color: #fff; margin-bottom: 12px; line-height: 1.6;">
+                <strong style="color: #00d4ff;">Rol:</strong> Actriz de Doblaje, Locutora y Cantante Argentina.
+            </p>
+            
+            <p style="font-size: 15px; color: #a1a1a6; margin-bottom: 25px; line-height: 1.6;">
+                <strong>Biografía:</strong> Noelia Lestani es una reconocida actriz de doblaje nacida en La Plata, Argentina. Con una increíble trayectoria interpretando voces infantiles, juveniles y adolescentes, se ganó el corazón de la comunidad latina por su papel protagónico como **Sasha Waybright** en *Amphibia*. Su talento brilla intensamente al darle vida a **Pomni** en el doblaje oficial de *The Amazing Digital Circus*, donde logra transmitir a la perfección la desesperación, la locura, el pánico y la inocencia del entrañable personaje atrapado en el circo.
+            </p>
+            
+            <p style="font-size: 15px; color: #fff; margin-bottom: 12px; font-weight: 600;">Otros Trabajos Destacados:</p>
+            <ul style="color: #a1a1a6; font-size: 14px; line-height: 1.6; padding-left: 20px; margin: 0;">
+                <li><strong>Sasha Waybright</strong> en <em>Amphibia</em></li>
+                <li><strong>Muni Ohnaruto</strong> en <em>D4DJ First Mix</em></li>
+                <li><strong>Judith Grimes</strong> en <em>The Walking Dead</em></li>
+                <li><strong>Fuz / Carlos</strong> en <em>Mini Beat Power Rockers</em></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style>
+    @media (max-width: 600px) {
+        .persona {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+        }
+    }
+</style>
+{% endblock %}

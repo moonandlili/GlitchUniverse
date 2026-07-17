@@ -1,114 +1,46 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Redes Oficiales | Glitch Productions{% endblock %}
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Redes | Glitch Productions</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header>
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
+{% block content %}
 <section class="contenido">
+    <h1>Redes Oficiales</h1>
+    <p>
+        ¡Conéctate con la comunidad! Sigue a Glitch Productions en sus cuentas oficiales para enterarte antes que nadie de los nuevos estrenos, teasers y eventos.
+    </p>
 
-<h1>Redes oficiales</h1>
+    <div class="cards" style="margin-top: 40px;">
+        
+        <a href="https://www.youtube.com/@GLITCH" target="_blank" class="card" style="text-align: center; padding: 30px 10px; display: block;">
+            <img src="{{ url_for('static', filename='img/icons/youtube.png') }}" alt="YouTube" style="width: 60px; margin: 0 auto 15px auto;">
+            <h3>YouTube</h3>
+            <p style="margin-top: 10px; font-size: 13px;">Canal Principal</p>
+        </a>
 
-<div class="cards">
+        <a href="https://x.com/glitch_prod" target="_blank" class="card" style="text-align: center; padding: 30px 10px; display: block;">
+            <img src="{{ url_for('static', filename='img/icons/twitter.png') }}" alt="X / Twitter" style="width: 60px; margin: 0 auto 15px auto;">
+            <h3>X (Twitter)</h3>
+            <p style="margin-top: 10px; font-size: 13px;">Últimas Novedades</p>
+        </a>
 
-<a href="#">
-<!-- Reemplazar por el canal oficial de YouTube -->
+        <a href="https://www.instagram.com/glitch_prod" target="_blank" class="card" style="text-align: center; padding: 30px 10px; display: block;">
+            <img src="{{ url_for('static', filename='img/icons/instagram.png') }}" alt="Instagram" style="width: 60px; margin: 0 auto 15px auto;">
+            <h3>Instagram</h3>
+            <p style="margin-top: 10px; font-size: 13px;">Arte y Detrás de Escenas</p>
+        </a>
 
-<div class="card">
+        <a href="https://www.tiktok.com/@glitch_productions" target="_blank" class="card" style="text-align: center; padding: 30px 10px; display: block;">
+            <img src="{{ url_for('static', filename='img/icons/tiktok.png') }}" alt="TikTok" style="width: 60px; margin: 0 auto 15px auto;">
+            <h3>TikTok</h3>
+            <p style="margin-top: 10px; font-size: 13px;">Clips y Animaciones Cortas</p>
+        </a>
 
-<h3>YouTube</h3>
+        <a href="https://discord.gg/glitchproductions" target="_blank" class="card" style="text-align: center; padding: 30px 10px; display: block;">
+            <img src="{{ url_for('static', filename='img/icons/discord.png') }}" alt="Discord" style="width: 60px; margin: 0 auto 15px auto;">
+            <h3>Discord</h3>
+            <p style="margin-top: 10px; font-size: 13px;">Servidor de la Comunidad</p>
+        </a>
 
-</div>
-
-</a>
-
-<a href="#">
-<!-- Reemplazar por X -->
-
-<div class="card">
-
-<h3>X (Twitter)</h3>
-
-</div>
-
-</a>
-
-<a href="#">
-<!-- Reemplazar por Instagram -->
-
-<div class="card">
-
-<h3>Instagram</h3>
-
-</div>
-
-</a>
-
-<a href="#">
-<!-- Reemplazar por TikTok -->
-
-<div class="card">
-
-<h3>TikTok</h3>
-
-</div>
-
-</a>
-
-<a href="#">
-<!-- Reemplazar por Discord -->
-
-<div class="card">
-
-<h3>Discord</h3>
-
-</div>
-
-</a>
-
-</div>
-
+    </div>
 </section>
-
-<footer>
-
-<p>Proyecto realizado por Moon y Yammy ©2026</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

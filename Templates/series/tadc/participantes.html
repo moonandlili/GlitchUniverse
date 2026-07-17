@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px;">
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/1730571330813-EQKDQCVR00ON15TI212W/adc.jpg" alt="Digital Circus Music Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
+        <a href="{{ url_for('tadc') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('tadc_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('tadc_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #fff; background: #ff0055; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);">Participantes</a>
+        
+        <a href="{{ url_for('tadc_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        
+        <a href="{{ url_for('tadc_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('tadc_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>    
+
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(255, 0, 128, 0.5); color: #ff0055; margin-top: 30px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+        Participantes
+    </h1>
+
+    <p style="color: #a1a1a6; max-width: 700px; margin: 15px auto 40px auto; font-size: 16px; line-height: 1.6;">
+        Detrás de la locura digital, las risas de Pomni y el caos provocado por Caine, hay un increíble equipo de mentes creativas, voces talentosas y productores que hicieron posible este fenómeno de internet. ¡Explora cada categoría para conocer más sobre ellos!
+    </p>
+
+    <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; max-width: 1000px; margin: 0 auto 60px auto; text-align: left;">
+        
+        <a href="{{ url_for('tadc_creadores') }}" style="text-decoration: none;">
+            <div class="card" style="border-left: 4px solid #00d4ff; padding: 25px; background: #111115; border-radius: 12px; border-top: none; border-right: none; border-bottom: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">
+                <h2 style="font-size: 20px; color: #fff; margin: 0 0 10px 0; text-transform: uppercase; font-weight: 700;">Creadores</h2>
+                <p style="color: #a1a1a6; font-size: 14px; margin: 0; line-height: 1.4;">
+                    Conoce a Gooseworx y las mentes brillantes detrás de la idea original, la estética surrealista y el guion del show.
+                </p>
+            </div>
+        </a>
+
+        <a href="{{ url_for('tadc_actores_voz') }}" style="text-decoration: none;">
+            <div class="card" style="border-left: 4px solid #ff0055; padding: 25px; background: #111115; border-radius: 12px; border-top: none; border-right: none; border-bottom: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">
+                <h2 style="font-size: 20px; color: #fff; margin: 0 0 10px 0; text-transform: uppercase; font-weight: 700;">Actores de voz</h2>
+                <p style="color: #a1a1a6; font-size: 14px; margin: 0; line-height: 1.4;">
+                    El elenco estelar que le da vida, personalidad y esa emblemática desesperación a Pomni, Jax, Ragatha y compañía.
+                </p>
+            </div>
+        </a>
+        <a href="#" style="text-decoration: none; cursor: default;">
+            <div class="card" style="border-left: 4px solid #bb00ff; padding: 25px; background: #111115; border-radius: 12px; border-top: none; border-right: none; border-bottom: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); opacity: 0.6; height: 100%;">
+                <h2 style="font-size: 20px; color: #fff; margin: 0 0 10px 0; text-transform: uppercase; font-weight: 700;">Actores (Live Action)</h2>
+                <p style="color: #a1a1a6; font-size: 14px; margin: 0; line-height: 1.4;">
+                    <em>Sección en desarrollo.</em> Pronto podrás descubrir las bases e interpretaciones reales de animación.
+                </p>
+            </div>
+        </a>
+
+        <a href="{{ url_for('tadc_productores') }}" style="text-decoration: none;">
+            <div class="card" style="border-left: 4px solid #00ffaa; padding: 25px; background: #111115; border-radius: 12px; border-top: none; border-right: none; border-bottom: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">
+                <h2 style="font-size: 20px; color: #fff; margin: 0 0 10px 0; text-transform: uppercase; font-weight: 700;">Productores</h2>
+                <p style="color: #a1a1a6; font-size: 14px; margin: 0; line-height: 1.4;">
+                    El motor de Glitch Productions. Quienes coordinan el financiamiento, marketing y hacen que cada episodio llegue a nuestras pantallas.
+                </p>
+            </div>
+        </a>
+
+        <a href="#" style="text-decoration: none; cursor: default;">
+            <div class="card" style="border-left: 4px solid #f1c40f; padding: 25px; background: #111115; border-radius: 12px; border-top: none; border-right: none; border-bottom: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); opacity: 0.6; height: 100%;">
+                <h2 style="font-size: 20px; color: #fff; margin: 0 0 10px 0; text-transform: uppercase; font-weight: 700;">Otros participantes</h2>
+                <p style="color: #a1a1a6; font-size: 14px; margin: 0; line-height: 1.4;">
+                    <em>Sección en desarrollo.</em> Los artistas 3D, diseñadores y equipo técnico que pulen cada detalle.
+                </p>
+            </div>
+        </a>
+
+    </div>
+</section>
+{% endblock %}

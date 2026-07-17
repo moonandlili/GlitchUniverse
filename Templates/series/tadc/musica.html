@@ -1,214 +1,79 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Banda Sonora | The Amazing Digital Circus{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-    <meta charset="UTF-8">
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/1730571330813-EQKDQCVR00ON15TI212W/adc.jpg" alt="Digital Circus Music Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(255, 0, 85, 0.2);">
+        <a href="{{ url_for('tadc') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('tadc_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('tadc_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('tadc_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('tadc_people') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('tadc_musica') }}" style="text-decoration: none; color: #fff; background: #ff0055; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);">Música</a>
+        <a href="{{ url_for('tadc_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('tadc_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-    <title>Música | The Amazing Digital Circus</title>
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(255, 0, 128, 0.5); color: #ff0055; margin-top: 30px; font-weight: 800;">
+        BANDA SONORA OFICIAL
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Sumérgete en la desquiciada, colorida y nostálgica música que da vida al circo.</p>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-    <header class="header">
-
-        <a href="/">
-
-            <img
-                src="https://static.wikia.nocookie.net/logopedia/images/3/3f/The_Amazing_Digital_Circus_logo.png/revision/latest?cb=20240419164235">
-            <!-- Reemplazar por el logo -->
-
-        </a>
-
-        <nav>
-
-            <a href="/pages/glitch">Glitch</a>
-
-            <a href="/pages/series">Series</a>
-
-            <a href="/pages/tienda">Tienda</a>
-
-            <a href="/pages/anuncios">Anuncios</a>
-
-            <a href="/pages/juegos">Juegos</a>
-
-            <a href="/pages/fanarts">Fanarts</a>
-
-            <a href="/pages/redes">Redes</a>
-
-        </nav>
-
-    </header>
-
-    <section class="banner">
-
-        <img
-            src="https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/1730571330813-EQKDQCVR00ON15TI212W/adc.jpg">
-        <!-- Reemplazar por el banner -->
-
-    </section>
-
-    <section class="submenu-serie">
-
-        <a href="/series/tadc">
-
-            Inicio
-
-        </a>
-
-        <a href="/series/tadc/musica" class="activo">
-
-            Música
-
-        </a>
-
-    </section>
-
-    <section class="contenido">
-
-        <h1>Música</h1>
-
-        <div class="card">
-
-            <h2>Banda sonora</h2>
-
-            <p>
-
-                Compositor:Gooseworx y Evan
-                Alderete
-
-                (Nombre)
-
-            </p>
-
-            <p>
-
-                Información:
-
-                Los compositores principales de la banda sonora de The Amazing Digital Circus (El asombroso circo
-                digital)
-                 son:Gooseworx (Cooper Smith Goodwin): Creadora, escritora y directora de la serie. También es
-                la compositora principal y creadora del tema principal, «The Amazing Digital Circus Main Theme».
-                Evan
-                Alderete: Compositor, orquestador y arreglista de la serie. Trabaja enriqueciendo los bocetos y temas
-                musicales básicos creados por Gooseworx para transformarlos en las complejas canciones de los episodios.
-
-            </p>
-
-            <p>
-
-                Escuchar:
-
-                <a href="https://open.spotify.com/intl-es/album/2SgquMN2FvtGFR5b1Pf4Zy">
-
-                    (Agregar enlace oficial)
-
+    <div style="max-width: 950px; margin: 0 auto 60px auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; text-align: left; padding: 0 15px;">
+        
+        <div>
+            <div class="card" style="border-color: #ff0055; margin-bottom: 30px; padding: 25px; border-radius: 12px; background: #111115;">
+                <h2 style="border-left-color: #ff0055; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Los Compositores</h2>
+                <p style="color: #f5f5f7; font-size: 15px; font-weight: bold; margin-bottom: 8px;">Gooseworx & Evan Alderete</p>
+                <p style="color: #d1d1d6; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
+                    La banda sonora es una genialidad cooperativa. <strong>Gooseworx</strong> (creadora de la serie) compone los temas base, melodías principales y leitmotivs desquiciados. Luego, el talentoso compositor y arreglista <strong>Evan Alderete</strong> se encarga de darles la orquestación, profundidad instrumental y arreglos finales para que suenen con una calidad cinematográfica increíble.
+                </p>
+                <a href="https://open.spotify.com/intl-es/artist/1p9tJorVnLg2pA2qF6A02b" target="_blank" class="btn" style="display: inline-block; font-size: 12px; padding: 8px 15px; text-decoration: none;">
+                    Perfil de Gooseworx en Spotify 🟢
                 </a>
+            </div>
 
-            </p>
-
+            <div class="card" style="border-color: #00d4ff; padding: 25px; border-radius: 12px; background: #111115;">
+                <h2 style="border-left-color: #00d4ff; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Tema Principal</h2>
+                <p style="color: #f5f5f7; font-size: 15px; font-weight: bold; margin-bottom: 8px;">Theme from "The Amazing Digital Circus"</p>
+                <p style="color: #d1d1d6; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
+                    La canción insignia de la serie captura perfectamente la esencia del show: comienza como un alegre y animado ritmo de jazz circense de los años 30 (estilo <em>Big Band</em>), pero poco a poco se deforma, añadiendo sintetizadores desafinados y un tempo frenético que representa visual y auditivamente la pérdida de la cordura y el encierro del elenco.
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="https://open.spotify.com/intl-es/track/6p8Gv6H8K3p7OIdhC8g31l" target="_blank" class="btn" style="background: #1db954; border-color: #1db954; font-size: 12px; padding: 8px 15px; flex: 1; text-align: center;">
+                        Escuchar en Spotify 🎧
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=HwAPLk_sQ3w" target="_blank" class="btn" style="background: #ff0000; border-color: #ff0000; font-size: 12px; padding: 8px 15px; flex: 1; text-align: center;">
+                        Ver en YouTube 📺
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="card">
-
-            <h2>Canciones</h2>
-
-            <p>
-
-                Título:Theme from The Amazing Digital Circus
-
-                (Nombre)
-
-            </p>
-
-            <p>
-
-                Compositor:Gooseworx y Evan
-                Alderete
-
-                (Nombre)
-
-            </p>
-
-            <p>
-
-                Información: main song
-
-                (Escribir información)
-
-            </p>
-
-            <p>
-
-                Escuchar:spotify o youtube
-
-                <a href="https://open.spotify.com/intl-es/track/7IbCeDB7Jn8PWHSTAXIiBq?si=5752a527ef504e3d">
-
-                    (Agregar enlace oficial)
-
+        <div>
+            <div class="card" style="border-color: #ff0055; padding: 25px; border-radius: 12px; background: #111115; margin-bottom: 30px;">
+                <h2 style="border-left-color: #ff0055; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Álbum de la Banda Sonora</h2>
+                <p style="color: #f5f5f7; font-size: 15px; font-weight: bold; margin-bottom: 5px;">The Amazing Digital Circus (Original Pilot Soundtrack)</p>
+                <p style="color: #a1a1a6; font-size: 12px; margin-bottom: 15px;">Lanzamiento oficial: Octubre de 2023</p>
+                <p style="color: #d1d1d6; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
+                    Este álbum recopila todas las canciones de fondo, efectos ambientales melódicos y motivos de personajes que pudimos escuchar a lo largo del histórico episodio piloto, incluyendo el tema de Caine y las pistas de tensión en el vacío.
+                </p>
+                <a href="https://open.spotify.com/intl-es/album/5fO9SFrM2n7O7uR7eKIn12" target="_blank" class="btn" style="display: block; font-size: 12px; padding: 10px; text-align: center;">
+                    Escuchar Álbum Completo 💿
                 </a>
+            </div>
 
-            </p>
-
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.4); border: 2px solid #22222a;">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5fO9SFrM2n7O7uR7eKIn12?utm_source=generator&theme=0" width="100%" height="220" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="card">
-
-            <h2>Álbumes</h2>
-
-            <p>
-
-                Nombre:
-The Amazing Digital Circus (Original Pilot Soundtrack)
-
-                (Nombre)
-
-            </p>
-
-            <p>
-
-                Lanzamiento:2023
-
-                (Fecha)
-
-            </p>
-
-            <p>
-
-                Escuchar: youtube o spotify
-
-                <a href="https://open.spotify.com/intl-es/album/2SgquMN2FvtGFR5b1Pf4Zy?si=wEqo1PXrRmawtUDp7j7hbg">
-
-                    (Agregar enlace oficial)
-
-                </a>
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <footer>
-
-        <p>
-
-            Proyecto realizado por Moon y Yammy ©2026
-
-        </p>
-
-    </footer>
-
-</body>
-
-</html>
+    </div>
+</section>
+{% endblock %}

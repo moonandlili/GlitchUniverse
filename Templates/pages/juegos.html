@@ -1,89 +1,43 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Juegos | Glitch Productions{% endblock %}
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Juegos | Glitch Productions</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header>
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
+{% block content %}
 <section class="contenido">
+    <h1>Videojuegos</h1>
+    <p>
+        Descubre los títulos interactivos, experiencias y fan-games inspirados en los increíbles universos de Glitch Productions. ¡Toma el control!
+    </p>
 
-<h1>Juegos</h1>
+    <div class="cards" style="margin-top: 40px;">
+        
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/banners/game1.png') }}" alt="Digital Circus Game">
+            <h3>The Amazing Digital Circus: Escape</h3>
+            <p>Una aventura interactiva donde deberás resolver puzzles para intentar encontrar la salida del circo digital (sin perder la cordura en el intento).</p>
+            <div style="padding: 0 20px 20px; text-align: center;">
+                <a href="#" class="button" style="padding: 10px 20px; font-size: 12px;">Jugar Ahora</a>
+            </div>
+        </div>
 
-<p>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/banners/game2.png') }}" alt="Murder Drones Game">
+            <h3>Murder Drones: Copper 9 Survival</h3>
+            <p>Explora el planeta congelado, recolecta piezas y sobrevive a los letales Drones de Desmontaje en este shooter de supervivencia y acción.</p>
+            <div style="padding: 0 20px 20px; text-align: center;">
+                <a href="#" class="button" style="padding: 10px 20px; font-size: 12px;">Más Info</a>
+            </div>
+        </div>
 
-Videojuegos relacionados con Glitch Productions y sus series.
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/banners/game1.png') }}" alt="Meta Runner Game">
+            <h3>Ultra Jump Mania (Meta Runner)</h3>
+            <p>El icónico título de plataformas de la serie. Juega como Theo, supera obstáculos imposibles y recolecta todas las monedas doradas.</p>
+            <div style="padding: 0 20px 20px; text-align: center;">
+                <a href="#" class="button" style="padding: 10px 20px; font-size: 12px;">Descargar</a>
+            </div>
+        </div>
 
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>(Juego)</h3>
-
-<p>(Descripción)</p>
-
-</div>
-
-<div class="card">
-
-<h3>(Juego)</h3>
-
-<p>(Descripción)</p>
-
-</div>
-
-<div class="card">
-
-<h3>(Juego)</h3>
-
-<p>(Descripción)</p>
-
-</div>
-
-</div>
-
+    </div>
 </section>
-
-<footer>
-
-<p>Proyecto realizado por Moon y Yammy ©2026</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}
