@@ -1,97 +1,65 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Productores | Murder Drones{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Banner -->
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}" alt="Productores Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<meta charset="UTF-8">
+    <!-- Botón Volver -->
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="{{ url_for('md_productores') }}" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(155, 89, 182, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(155, 89, 182, 0.1);" onmouseover="this.style.background='#9b59b6'; this.style.boxShadow='0 0 15px rgba(155, 89, 182, 0.4)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.boxShadow='0 0 10px rgba(155, 89, 182, 0.1)'">
+            ← Volver a Participantes
+        </a>
+    </div>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(155, 89, 182, 0.5); color: #9b59b6; margin-bottom: 20px; font-weight: 800; text-transform: uppercase;">
+        Productores Ejecutivos
+    </h1>
 
-<title>Productores | Murder Drones</title>
+    <p style="font-size: 16px; color: #a1a1a6; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6;">
+        Los fundadores de Glitch Productions y las mentes detrás de la visión estratégica que hizo posible el desolador y fascinante universo de *Murder Drones*.
+    </p>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Cuadrícula de Productores -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px;">
 
-</head>
+        <!-- Kevin Lerdwichagul -->
+        <div class="prod-card" style="background: #111115; border-radius: 16px; border-left: 4px solid #9b59b6; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                    <img src="{{ url_for('static', filename='img/people/kevin_l.jpg') }}" alt="Kevin Lerdwichagul" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid #9b59b6;">
+                    <div>
+                        <h2 style="font-size: 20px; color: #fff; margin: 0; font-weight: 700;">Kevin Lerdwichagul</h2>
+                        <p style="color: #9b59b6; margin: 0; font-size: 13px; font-weight: 600; text-transform: uppercase;">CEO y Productor Ejecutivo</p>
+                    </div>
+                </div>
+                <p style="font-size: 14px; color: #a1a1a6; line-height: 1.5; margin: 0;">
+                    Cofundador de Glitch Productions. Kevin lidera la gestión empresarial y la estrategia del estudio, asegurando que la ambiciosa calidad técnica de *Murder Drones* sea una realidad en cada uno de sus episodios.
+                </p>
+            </div>
+        </div>
 
-<body>
+        <!-- Luke Lerdwichagul -->
+        <div class="prod-card" style="background: #111115; border-radius: 16px; border-left: 4px solid #9b59b6; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                    <img src="{{ url_for('static', filename='img/people/luke_l.jpg') }}" alt="Luke Lerdwichagul" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid #9b59b6;">
+                    <div>
+                        <h2 style="font-size: 20px; color: #fff; margin: 0; font-weight: 700;">Luke Lerdwichagul</h2>
+                        <p style="color: #9b59b6; margin: 0; font-size: 13px; font-weight: 600; text-transform: uppercase;">Director Creativo de Glitch</p>
+                    </div>
+                </div>
+                <p style="font-size: 14px; color: #a1a1a6; line-height: 1.5; margin: 0;">
+                    Reconocido por su trayectoria en YouTube como SMG4, Luke cofundó Glitch con el objetivo de elevar la animación independiente. Como productor ejecutivo, supervisa el desarrollo creativo manteniendo el tono único y oscuro de la serie.
+                </p>
+            </div>
+        </div>
 
-<header>
-
-<a href="/">
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/md/people">← Volver a Participantes</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Productores</h1>
-
-<div class="cards">
-
-<a href="/people/kevin_lerdwichagul">
-
-<div class="card">
-
-<h3>Kevin Lerdwichagul</h3>
-
-<p>Productor ejecutivo</p>
-
-</div>
-
-</a>
-
-<a href="/people/luke_lerdwichagul">
-
-<div class="card">
-
-<h3>Luke Lerdwichagul</h3>
-
-<p>Productor ejecutivo</p>
-
-</div>
-
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

@@ -1,97 +1,75 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Curiosidades | Murder Drones{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-<meta charset="UTF-8">
+    <!-- Banner -->
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}" alt="Murder Drones Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menú de navegación -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(155, 89, 182, 0.2);">
+        <a href="{{ url_for('md') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('md_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('md_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('md_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('md_productores') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('md_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('md_curiosidades') }}" style="text-decoration: none; color: #fff; background: #9b59b6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);">Curiosidades</a>
+        <a href="{{ url_for('md_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-<title>Curiosidades | Murder Drones</title>
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(155, 89, 182, 0.5); color: #9b59b6; margin-top: 30px; font-weight: 800;">
+        DATOS Y SECRETOS DE COPPER 9 🤖
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Descubre los detalles ocultos detrás de la creación de Murder Drones.</p>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Grid de Curiosidades -->
+    <div style="max-width: 950px; margin: 0 auto 60px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; text-align: left; padding: 0 15px;">
 
-</head>
+        <div class="card" style="border-color: #9b59b6; padding: 25px; border-radius: 12px; background: #111115; height: 100%; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #333;">
+            <div>
+                <h2 style="border-left: 4px solid #9b59b6; padding-left: 10px; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Contexto y Origen</h2>
+                <ul style="list-style: disc; margin-left: 20px; color: #d1d1d6; font-size: 14px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;"><strong>Temática Post-Apocalíptica:</strong> La serie se inspira en una mezcla de horror corporal, humor negro y estética industrial, distanciándose de las producciones más familiares de GLITCH.</li>
+                    <li style="margin-bottom: 10px;"><strong>El Planeta Copper 9:</strong> El nombre sugiere una referencia a la minería espacial, un recurso común en la ciencia ficción que aquí sirve como la tumba helada de la humanidad.</li>
+                </ul>
+            </div>
+        </div>
 
-<body>
+        <div class="card" style="border-color: #f1c40f; padding: 25px; border-radius: 12px; background: #111115; height: 100%; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #333;">
+            <div>
+                <h2 style="border-left: 4px solid #f1c40f; padding-left: 10px; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Diseño y Estética</h2>
+                <ul style="list-style: disc; margin-left: 20px; color: #d1d1d6; font-size: 14px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;"><strong>Los "Disassembly Drones":</strong> Su diseño fue pensado para parecerse a ángeles de la muerte tecnológicos, con alas extensibles y armas integradas que cambian de forma constantemente.</li>
+                    <li style="margin-bottom: 10px;"><strong>La Influencia del Horror:</strong> Liam Vickers (creador) ha citado influencias de obras de culto sobre robots y IA, donde la línea entre la máquina y el humano se vuelve inquietantemente borrosa.</li>
+                </ul>
+            </div>
+        </div>
 
-<header>
+        <div class="card" style="border-color: #e67e22; padding: 25px; border-radius: 12px; background: #111115; height: 100%; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #333;">
+            <div>
+                <h2 style="border-left: 4px solid #e67e22; padding-left: 10px; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Detalles de Producción</h2>
+                <ul style="list-style: disc; margin-left: 20px; color: #d1d1d6; font-size: 14px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;"><strong>Universo Expandido:</strong> La narrativa utiliza pequeñas pistas visuales en el fondo de los escenarios para contar la historia de lo que ocurrió antes del colapso del núcleo del planeta.</li>
+                    <li style="margin-bottom: 10px;"><strong>La IA como Enemiga:</strong> A diferencia de otras series de robots, aquí la Inteligencia Artificial (Absolute Solver) se presenta como una fuerza casi cósmica, incomprensible y aterradora.</li>
+                </ul>
+            </div>
+        </div>
 
-<a href="/">
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-</a>
+        <div class="card" style="border-color: #2ecc71; padding: 25px; border-radius: 12px; background: #111115; height: 100%; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #333;">
+            <div>
+                <h2 style="border-left: 4px solid #2ecc71; padding-left: 10px; font-size: 20px; text-transform: uppercase; margin-bottom: 15px;">Easter Eggs</h2>
+                <ul style="list-style: disc; margin-left: 20px; color: #d1d1d6; font-size: 14px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;"><strong>Referencias a JCJenson:</strong> La empresa es omnipresente, apareciendo en casi cada objeto, desde el material de oficina hasta las naves, simbolizando el control corporativo total.</li>
+                    <li style="margin-bottom: 10px;"><strong>La Evolución de Uzi:</strong> Su visor a menudo muestra mensajes que presagian eventos futuros o reflejan su estado mental caótico, siendo un detalle clave para entender su desarrollo.</li>
+                </ul>
+            </div>
+        </div>
 
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/md">Inicio</a>
-
-<a href="/series/md/informacion">Información</a>
-
-<a href="/series/md/capitulos">Capítulos</a>
-
-<a href="/series/md/personajes">Personajes</a>
-
-<a href="/series/md/participantes">Participantes</a>
-
-<a href="/series/md/musica">Música</a>
-
-<a href="/series/md/curiosidades" class="activo">Curiosidades</a>
-
-<a href="/series/md/redes">Redes</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Curiosidades</h1>
-
-<ul>
-
-<li>(Curiosidad 1)</li>
-
-<li>(Curiosidad 2)</li>
-
-<li>(Curiosidad 3)</li>
-
-<li>(Curiosidad 4)</li>
-
-<li>(Curiosidad 5)</li>
-
-</ul>
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

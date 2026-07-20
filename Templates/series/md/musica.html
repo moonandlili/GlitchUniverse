@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Banda Sonora | Murder Drones{% endblock %}
+
+{% block content %}
+<section class="contenido" style="text-align: center;">
+
+    <!-- Banner -->
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}" alt="Murder Drones Music Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
+
+    <!-- Menú de navegación -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(155, 89, 182, 0.2);">
+        <a href="{{ url_for('md') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('md_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('md_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('md_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('md_productores') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('md_musica') }}" style="text-decoration: none; color: #fff; background: #9b59b6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);">Música</a>
+        <a href="{{ url_for('md_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('md_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
+
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(155, 89, 182, 0.5); color: #9b59b6; margin-top: 30px; font-weight: 800;">
+        BANDA SONORA OFICIAL
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Experimenta la atmósfera industrial, inquietante y épica del páramo de Copper 9.</p>
+
+    <div style="max-width: 950px; margin: 0 auto 60px auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; text-align: left; padding: 0 15px;">
+        
+        <div>
+            <div class="card" style="border: 2px solid #9b59b6; margin-bottom: 30px; padding: 25px; border-radius: 12px; background: #111115;">
+                <h2 style="border-left: 4px solid #9b59b6; padding-left: 15px; font-size: 20px; text-transform: uppercase; margin-bottom: 15px; color: #fff;">El Compositor</h2>
+                <p style="color: #f5f5f7; font-size: 15px; font-weight: bold; margin-bottom: 8px;">AJ DiCosimo</p>
+                <p style="color: #d1d1d6; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
+                    La música de Murder Drones es obra de <strong>AJ DiCosimo</strong>, quien ha logrado definir la identidad sonora de la serie. Sus composiciones fusionan texturas industriales, sintetizadores oscuros y elementos orquestales que capturan perfectamente el peligro, la melancolía y el caos que viven Uzi y los drones de desmantelamiento.
+                </p>
+                <a href="https://open.spotify.com/intl-es/artist/5L10cM41l1575Y9Z3aP60v" target="_blank" style="display: inline-block; background: #9b59b6; color: #fff; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-size: 12px;">
+                    Perfil de AJ DiCosimo en Spotify 🟢
+                </a>
+            </div>
+
+            <div class="card" style="border: 2px solid #3498db; padding: 25px; border-radius: 12px; background: #111115;">
+                <h2 style="border-left: 4px solid #3498db; padding-left: 15px; font-size: 20px; text-transform: uppercase; margin-bottom: 15px; color: #fff;">Tema Destacado</h2>
+                <p style="color: #f5f5f7; font-size: 15px; font-weight: bold; margin-bottom: 8px;">Murder Drones (Main Theme)</p>
+                <p style="color: #d1d1d6; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
+                    El tema principal establece el tono post-apocalíptico de la historia. Con ritmos electrónicos pesados y progresiones tensas, refleja la lucha constante contra el Solver Absoluto y la atmósfera gélida de Copper 9.
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="https://open.spotify.com/intl-es/track/5u0w2kQ6x75h7v1TjV7tW8" target="_blank" style="background: #1db954; color: #000; font-weight: bold; padding: 8px 15px; flex: 1; text-align: center; text-decoration: none; border-radius: 5px; font-size: 12px;">
+                        Escuchar en Spotify 🎧
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="card" style="border: 2px solid #9b59b6; padding: 25px; border-radius: 12px; background: #111115; margin-bottom: 30px;">
+                <h2 style="border-left: 4px solid #9b59b6; padding-left: 15px; font-size: 20px; text-transform: uppercase; margin-bottom: 15px; color: #fff;">Banda Sonora</h2>
+                <p style="color: #f5f5f7; font-size: 15px; font-weight: bold; margin-bottom: 5px;">Murder Drones: The Original Soundtrack</p>
+                <p style="color: #a1a1a6; font-size: 12px; margin-bottom: 15px;">Explora el catálogo completo</p>
+                <p style="color: #d1d1d6; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
+                    La banda sonora completa acompaña cada momento crítico de la serie, desde las escenas de acción trepidante hasta los momentos de horror psicológico y revelaciones profundas.
+                </p>
+            </div>
+
+            <!-- Embed de Spotify (ejemplo genérico o ajuste según álbum real) -->
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.4); border: 2px solid #22222a;">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0QZq8e1y5c0b1n9rP2x3aD?utm_source=generator&theme=0" width="100%" height="220" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

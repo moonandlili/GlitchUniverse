@@ -1,93 +1,81 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Botón Volver -->
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <!-- Se asume que tienes una ruta llamada 'md_personajes' en tu app -->
+        <a href="/series/md/personajes" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(166, 77, 255, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(166, 77, 255, 0.1);" onmouseover="this.style.background='#a64dff'; this.style.color='#fff'; this.style.boxShadow='0 0 15px rgba(166, 77, 255, 0.6)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.color='#fff'; this.style.boxShadow='0 0 10px rgba(166, 77, 255, 0.1)'">
+            ← Volver a Personajes
+        </a>
+    </div>
 
-<head>
+    <!-- Ficha Principal -->
+    <div class="personaje-ficha" style="background: #111115; border-radius: 16px; border-left: 4px solid #a64dff; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: row; gap: 35px; align-items: flex-start; margin-bottom: 30px; flex-wrap: wrap;">
+        
+        <!-- Imagen del Personaje -->
+        <div style="flex-shrink: 0; text-align: center; margin: 0 auto 20px auto;">
+            <img src="{{ url_for('static', filename='img/characters/md/uzi.png') }}" alt="Uzi Doorman" style="width: 220px; height: 220px; border-radius: 16px; object-fit: contain; background: #1a1a24; border: 3px solid #a64dff; box-shadow: 0 0 20px rgba(166, 77, 255, 0.2);">
+        </div>
 
-<meta charset="UTF-8">
+        <!-- Info del Personaje -->
+        <div style="flex-grow: 1; min-width: 280px;">
+            <h1 style="font-size: 36px; color: #fff; margin: 0 0 5px 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+                Uzi Doorman
+            </h1>
+            <p style="font-size: 16px; color: #a64dff; margin: 0 0 20px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                La Worker Drone Rebelde
+            </p>
+            
+            <p style="font-size: 15px; color: #a1a1a6; margin-bottom: 20px; line-height: 1.6;">
+                <strong>Uzi</strong> es la protagonista principal de <em>Murder Drones</em>. Es una Worker Drone adolescente con mucha angustia, rebeldía y un fuerte complejo de superioridad (para ocultar sus inseguridades). Harta de vivir escondida de los Disassembly Drones por orden de su padre (Khan), decide tomar la iniciativa, construyendo su propio cañón de riel. En su viaje, desarrolla una inusual amistad con N y despierta los peligrosos poderes del <strong>Absolute Solver</strong>.
+            </p>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Grid de Estadísticas -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 25px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #a64dff; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Especie</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Worker Drone (Infectada)</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #a64dff; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Habilidad / Arma</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Absolute Solver / Railgun</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #a64dff; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Voz Original</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Elsie Lovelock</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<title>Uzi | Murder Drones</title>
+    <!-- Curiosidades -->
+    <div style="background: #111115; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; margin-bottom: 30px; border: 1px solid rgba(255, 255, 255, 0.05);">
+        <h2 style="font-size: 22px; color: #fff; margin: 0 0 20px 0; font-weight: 700; border-bottom: 2px solid rgba(166, 77, 255, 0.3); padding-bottom: 10px;">
+            Curiosidades de Uzi
+        </h2>
+        <ul style="color: #a1a1a6; font-size: 15px; line-height: 1.8; margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong style="color: #a64dff;">Mente Brillante:</strong> A pesar de su actitud caótica, construyó un Railgun funcional capaz de destruir a un Murder Drone desde cero en su habitación.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #a64dff;">El Absolute Solver:</strong> Uzi heredó este extraño y terrorífico programa de su madre, Nori. Le otorga habilidades como telequinesis, regeneración y mutaciones biológicas, pero a un alto costo psicológico.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #a64dff;">Problemas Familiares:</strong> Tiene una relación sumamente tensa con su padre, Khan Doorman, ya que él prefirió salvar una de sus preciadas puertas antes que ayudarla cuando fue atacada por N.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #a64dff;">Estilo Emo:</strong> Su diseño está fuertemente inspirado en la estética "emo/scene" de los años 2000, incluyendo el gorro, las botas con plataformas y los chistes oscuros.</li>
+        </ul>
+    </div>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-<a href="/pages/series">Series</a>
-<a href="/pages/tienda">Tienda</a>
-<a href="/pages/anuncios">Anuncios</a>
-<a href="/pages/juegos">Juegos</a>
-<a href="/pages/fanarts">Fanarts</a>
-<a href="/pages/redes">Redes</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
-</section>
-
-<section class="submenu-serie">
-
-<a href="/series/md/personajes">← Volver a Personajes</a>
-
-</section>
-
-<section class="contenido">
-
-<img src="{{ url_for('static', filename='img/characters/md/uzi.png') }}">
-
-<h1>Uzi</h1>
-
-<p><strong>Nombre:</strong> Uzi</p>
-
-<p><strong>Primera aparición:</strong> (Episodio)</p>
-
-<p><strong>Especie:</strong> (Escribir)</p>
-
-<p><strong>Edad:</strong> (Escribir)</p>
-
-<p><strong>Personalidad:</strong> (Escribir)</p>
-
-<p><strong>Historia:</strong> (Escribir)</p>
-
-<p><strong>Curiosidades:</strong> (Escribir)</p>
-
-<p><strong>Actor/Actriz de voz (original):</strong> (Nombre)</p>
-
-<p><strong>Actor/Actriz de voz (español):</strong> (Nombre)</p>
-
-<p><strong>Galería:</strong></p>
-
-<img src="{{ url_for('static', filename='img/characters/md/uzi/gallery1.jpg') }}">
-<img src="{{ url_for('static', filename='img/characters/md/uzi/gallery2.jpg') }}">
-<img src="{{ url_for('static', filename='img/characters/md/uzi/gallery3.jpg') }}">
+    <!-- Galería (Integrada al diseño) -->
+    <div style="background: #111115; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; margin-bottom: 50px; border: 1px solid rgba(255, 255, 255, 0.05);">
+        <h2 style="font-size: 22px; color: #fff; margin: 0 0 20px 0; font-weight: 700; border-bottom: 2px solid rgba(166, 77, 255, 0.3); padding-bottom: 10px;">
+            Galería
+        </h2>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+            <img src="{{ url_for('static', filename='img/characters/md/uzi/gallery1.jpg') }}" alt="Uzi 1" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(166, 77, 255, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            
+            <img src="{{ url_for('static', filename='img/characters/md/uzi/gallery2.jpg') }}" alt="Uzi 2" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(166, 77, 255, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            
+            <img src="{{ url_for('static', filename='img/characters/md/uzi/gallery3.jpg') }}" alt="Uzi 3" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(166, 77, 255, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+    </div>
 
 </section>
-
-<footer>
-
-<p>Proyecto realizado por Moon y Yammy ©2026</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %} 

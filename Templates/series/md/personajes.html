@@ -1,113 +1,78 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Personajes | Murder Drones{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-<meta charset="UTF-8">
+    <!-- Banner -->
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}" alt="Murder Drones Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menú de navegación -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(155, 89, 182, 0.2);">
+        <a href="{{ url_for('md') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('md_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('md_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('md_personajes') }}" style="text-decoration: none; color: #fff; background: #9b59b6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);">Personajes</a>
+        <a href="{{ url_for('md_productores') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('md_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('md_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('md_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-<title>Personajes | Murder Drones</title>
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(155, 89, 182, 0.5); color: #9b59b6; margin-top: 30px; font-weight: 800;">
+        ELENCO DE PERSONAJES
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Explora a los habitantes de Copper 9 y los drones enviados por JCJenson.</p>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; max-width: 1000px; margin: 0 auto 60px auto; padding: 0 15px;">
 
-</head>
+        <!-- Uzi -->
+        <a href="{{ url_for('md_uzi') }}" style="text-decoration: none;">
+            <div class="card" style="border: 2px solid #9b59b6; transition: transform 0.3s, box-shadow 0.3s; height: 100%; border-radius: 12px; padding: 15px; background: #111115;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a; display: flex; justify-content: center; align-items: center;">
+                    <img src="{{ url_for('static', filename='img/characters/md/uzi.png') }}" alt="Uzi" style="width: 100%; height: 200px; display: block; object-fit: contain; padding: 10px;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">Uzi Doorman</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">La drone rebelde con grandes planes</p>
+            </div>
+        </a>
 
-<body>
+        <!-- N -->
+        <a href="{{ url_for('md_n') }}" style="text-decoration: none;">
+            <div class="card" style="border: 2px solid #3498db; transition: transform 0.3s, box-shadow 0.3s; height: 100%; border-radius: 12px; padding: 15px; background: #111115;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a; display: flex; justify-content: center; align-items: center;">
+                    <img src="{{ url_for('static', filename='img/characters/md/n.png') }}" alt="N" style="width: 100%; height: 200px; display: block; object-fit: contain; padding: 10px;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">N</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">El amable drone de desmantelamiento</p>
+            </div>
+        </a>
 
-<header>
+        <!-- V -->
+        <a href="{{ url_for('md_v') }}" style="text-decoration: none;">
+            <div class="card" style="border: 2px solid #e74c3c; transition: transform 0.3s, box-shadow 0.3s; height: 100%; border-radius: 12px; padding: 15px; background: #111115;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a; display: flex; justify-content: center; align-items: center;">
+                    <img src="{{ url_for('static', filename='img/characters/md/v.png') }}" alt="V" style="width: 100%; height: 200px; display: block; object-fit: contain; padding: 10px;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">V</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">La letal y misteriosa asesina</p>
+            </div>
+        </a>
 
-<a href="/">
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-</a>
+        <!-- J -->
+        <a href="{{ url_for('md_j') }}" style="text-decoration: none;">
+            <div class="card" style="border: 2px solid #f1c40f; transition: transform 0.3s, box-shadow 0.3s; height: 100%; border-radius: 12px; padding: 15px; background: #111115;">
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: #16161a; display: flex; justify-content: center; align-items: center;">
+                    <img src="{{ url_for('static', filename='img/characters/md/j.png') }}" alt="J" style="width: 100%; height: 200px; display: block; object-fit: contain; padding: 10px;">
+                </div>
+                <h3 style="font-size: 20px; color: #f5f5f7; margin-bottom: 5px;">J</h3>
+                <p style="color: #a1a1a6; font-size: 13px;">La eficiente líder de escuadrón</p>
+            </div>
+        </a>
 
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/md">Inicio</a>
-
-<a href="/series/md/informacion">Información</a>
-
-<a href="/series/md/capitulos">Capítulos</a>
-
-<a href="/series/md/personajes" class="activo">Personajes</a>
-
-<a href="/series/md/participantes">Participantes</a>
-
-<a href="/series/md/musica">Música</a>
-
-<a href="/series/md/curiosidades">Curiosidades</a>
-
-<a href="/series/md/redes">Redes</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Personajes</h1>
-
-<div class="cards">
-
-<a href="/series/md/characters/uzi">
-<div class="card">
-<img src="{{ url_for('static', filename='img/characters/md/uzi.png') }}">
-<h3>Uzi</h3>
-</div>
-</a>
-
-<a href="/series/md/characters/n">
-<div class="card">
-<img src="{{ url_for('static', filename='img/characters/md/n.png') }}">
-<h3>N</h3>
-</div>
-</a>
-
-<a href="/series/md/characters/v">
-<div class="card">
-<img src="{{ url_for('static', filename='img/characters/md/v.png') }}">
-<h3>V</h3>
-</div>
-</a>
-
-<a href="/series/md/characters/j">
-<div class="card">
-<img src="{{ url_for('static', filename='img/characters/md/j.png') }}">
-<h3>J</h3>
-</div>
-</a>
-
-<!-- Agregar el resto de personajes -->
-
-</div>
-
-</section>
-
-<footer>
-
-<p>Proyecto realizado por Moon y Yammy ©2026</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

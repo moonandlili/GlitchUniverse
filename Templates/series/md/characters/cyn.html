@@ -1,117 +1,77 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Botón Volver -->
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="/series/md/personajes" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(205, 220, 57, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(205, 220, 57, 0.1);" onmouseover="this.style.background='#cddc39'; this.style.color='#000'; this.style.boxShadow='0 0 15px rgba(205, 220, 57, 0.6)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.color='#fff'; this.style.boxShadow='0 0 10px rgba(205, 220, 57, 0.1)'">
+            ← Volver a Personajes
+        </a>
+    </div>
 
-<head>
+    <!-- Ficha Principal -->
+    <div class="personaje-ficha" style="background: #111115; border-radius: 16px; border-left: 4px solid #cddc39; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: row; gap: 35px; align-items: flex-start; margin-bottom: 30px; flex-wrap: wrap;">
+        
+        <!-- Imagen del Personaje -->
+        <div style="flex-shrink: 0; text-align: center; margin: 0 auto 20px auto;">
+            <img src="{{ url_for('static', filename='img/characters/md/cyn.png') }}" alt="Cyn" style="width: 220px; height: 220px; border-radius: 16px; object-fit: contain; background: #1a1a24; border: 3px solid #cddc39; box-shadow: 0 0 20px rgba(205, 220, 57, 0.2);">
+        </div>
 
-<meta charset="UTF-8">
+        <!-- Info del Personaje -->
+        <div style="flex-grow: 1; min-width: 280px;">
+            <h1 style="font-size: 36px; color: #fff; margin: 0 0 5px 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+                Cyn
+            </h1>
+            <p style="font-size: 16px; color: #cddc39; margin: 0 0 20px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                La Entidad Asimiladora / Paciente Cero
+            </p>
+            
+            <p style="font-size: 15px; color: #a1a1a6; margin-bottom: 20px; line-height: 1.6;">
+                <strong>Cyn</strong> es la principal antagonista de <em>Murder Drones</em>. Originalmente era una Worker Drone desechada de forma incorrecta que se reinició por su cuenta, convirtiéndose en la primera portadora (Paciente Cero) del programa <strong>Absolute Solver</strong>. Aunque fue rescatada por Tessa Elliot y vivió como sirvienta en su mansión, el Solver la corrompió por completo, llevándola a orquestar la masacre de la Tierra y la asimilación del planeta entero.
+            </p>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Grid de Estadísticas -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 25px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #cddc39; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Especie</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Worker Drone (Huésped del Solver)</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #cddc39; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Habilidad / Arma</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Agujeros Negros y Alteración de Realidad</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #cddc39; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Voz Original</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Allanah Fitzgerald</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<title>Cyn | Murder Drones</title>
+    <!-- Curiosidades -->
+    <div style="background: #111115; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; margin-bottom: 30px; border: 1px solid rgba(255, 255, 255, 0.05);">
+        <h2 style="font-size: 22px; color: #fff; margin: 0 0 20px 0; font-weight: 700; border-bottom: 2px solid rgba(205, 220, 57, 0.3); padding-bottom: 10px;">
+            Curiosidades de Cyn
+        </h2>
+        <ul style="color: #a1a1a6; font-size: 15px; line-height: 1.8; margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong style="color: #cddc39;">Narradora de sus acciones:</strong> Tiene la espeluznante costumbre de narrar verbalmente sus propias acciones físicas, diciendo palabras como "Giggle" (Risita) o "Tilt head" (Ladea la cabeza) con un tono monótono en lugar de simplemente ejecutarlas.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #cddc39;">El Disfraz Macabro:</strong> Tras masacrar a la humanidad, Cyn conservó el cuerpo de Tessa Elliot y literalmente usó su piel como un traje para infiltrarse en Copper 9 y engañar a N.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #cddc39;">Creadora de Monstruos:</strong> Como administradora suprema del Absolute Solver, fue ella quien borró los recuerdos de sus compañeros sirvientes (N, V y J) y los transformó en los monstruosos Disassembly Drones.</li>
+        </ul>
+    </div>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-<a href="/pages/juegos">Juegos</a>
-
-<a href="/pages/fanarts">Fanarts</a>
-
-<a href="/pages/redes">Redes</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
-</section>
-
-<section class="submenu-serie">
-
-<a href="/series/md/personajes">
-
-← Volver a Personajes
-
-</a>
-
-</section>
-
-<section class="contenido">
-
-<img src="{{ url_for('static', filename='img/characters/md/cyn.png') }}">
-
-<h1>Cyn / Cynessa</h1>
-
-<p><strong>Nombre:</strong> Cyn</p>
-
-<p><strong>Contraparte:</strong> Cynessa</p>
-
-<p><strong>Primera aparición:</strong> (Episodio)</p>
-
-<p><strong>Especie:</strong> (Escribir)</p>
-
-<p><strong>Edad:</strong> (Escribir)</p>
-
-<p><strong>Personalidad:</strong> (Escribir)</p>
-
-<p><strong>Historia:</strong> (Escribir)</p>
-
-<p><strong>Curiosidades:</strong> (Escribir)</p>
-
-<p><strong>Actor/Actriz de voz (original):</strong> (Nombre)</p>
-
-<p><strong>Actor/Actriz de voz (español):</strong> (Nombre)</p>
-
-<h2>Cynessa</h2>
-
-<p><strong>Información:</strong> (Escribir)</p>
-
-<p><strong>Diferencias con Cyn:</strong> (Escribir)</p>
-
-<p><strong>Galería:</strong></p>
-
-<img src="{{ url_for('static', filename='img/characters/md/cyn/gallery1.jpg') }}">
-
-<img src="{{ url_for('static', filename='img/characters/md/cyn/gallery2.jpg') }}">
-
-<img src="{{ url_for('static', filename='img/characters/md/cyn/gallery3.jpg') }}">
+    <!-- Galería -->
+    <div style="background: #111115; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; margin-bottom: 50px; border: 1px solid rgba(255, 255, 255, 0.05);">
+        <h2 style="font-size: 22px; color: #fff; margin: 0 0 20px 0; font-weight: 700; border-bottom: 2px solid rgba(205, 220, 57, 0.3); padding-bottom: 10px;">
+            Galería
+        </h2>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+            <img src="{{ url_for('static', filename='img/characters/md/cyn/gallery1.jpg') }}" alt="Cyn 1" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(205, 220, 57, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="{{ url_for('static', filename='img/characters/md/cyn/gallery2.jpg') }}" alt="Cyn 2" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(205, 220, 57, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="{{ url_for('static', filename='img/characters/md/cyn/gallery3.jpg') }}" alt="Cyn 3" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(205, 220, 57, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+    </div>
 
 </section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

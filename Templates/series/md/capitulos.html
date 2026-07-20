@@ -1,147 +1,137 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Capítulos | Murder Drones{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-<meta charset="UTF-8">
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://i.redd.it/can-you-guys-tell-me-why-the-glitch-banner-was-changed-for-v0-8io0pm3fr9jb1.png?width=1500&format=png&auto=webp&s=0d2ef58da7570fa3e698d6bdd80d45b5652c42a9" alt="Murder Drones Banner"
+            style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(155, 89, 182, 0.2);">
+        <a href="{{ url_for('md') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('md_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('md_capitulos') }}" style="text-decoration: none; color: #fff; background: #9b59b6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);">Capítulos</a>
+        <a href="{{ url_for('md_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('md_productores') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Productores</a>
+        <a href="{{ url_for('md_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('md_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('md_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.08)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-<title>Capítulos | Murder Drones</title>
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(155, 89, 182, 0.5); color: #9b59b6; margin-top: 30px; font-weight: 800;">
+        GUÍA DE EPISODIOS
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Explora el listado oficial de capítulos de Murder Drones.</p>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto 50px auto; padding: 0 15px; text-align: left;">
 
-</head>
+        <!-- Cap 1 -->
+        <div class="card" style="border-color: #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
+                    <img src="https://i.ytimg.com/vi/mImFz8mkaHo/maxresdefault.jpg" alt="Episodio 1" style="width: 100%; height: auto; display: block;">
+                </div>
+                <span style="color: #9b59b6; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 1</span>
+                <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">PILOT</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">Uzi, una joven trabajadora, busca rebelarse contra los drones asesinos en un planeta post-apocalíptico.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=mImFz8mkaHo" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+        </div>
 
-<body>
+        <!-- Cap 2 -->
+        <div class="card" style="border-color: #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
+                    <img src="https://i.ytimg.com/vi/7z8DO1KhPFo/maxresdefault.jpg" alt="Episodio 2" style="width: 100%; height: auto; display: block;">
+                </div>
+                <span style="color: #9b59b6; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 2</span>
+                <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Heartbeat</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">N comienza a cuestionar su lealtad mientras Uzi intenta descifrar los secretos de su propio programa.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=7z8DO1KhPFo" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+        </div>
 
-<header>
+        <!-- Cap 3 -->
+        <div class="card" style="border-color: #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
+                    <img src="https://static.wikia.nocookie.net/murder-drones/images/f/fc/Murder_Drones_Season_1_Episode_2_The_Promening.png/revision/latest/scale-to-width-down/1000?cb=20230216233252" alt="Episodio 3" style="width: 100%; height: auto; display: block;">
+                </div>
+                <span style="color: #9b59b6; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 3</span>
+                <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">The Prom</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">Una noche de baile escolar se convierte en una trampa mortal ante una amenaza viral inesperada.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=djsJqNAGMuY&t=173s" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+        </div>
 
-<a href="/">
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-</a>
+        <!-- Cap 4 -->
+        <div class="card" style="border-color: #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
+                    <img src="https://i.ytimg.com/vi/63bUBEIhpNk/maxresdefault.jpg" alt="Episodio 4" style="width: 100%; height: auto; display: block;">
+                </div>
+                <span style="color: #9b59b6; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 4</span>
+                <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Cabin Fever</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">El equipo se interna en las profundidades de JcJenson, enfrentándose a horrores mecánicos olvidados.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=63bUBEIhpNk&t=7s" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+        </div>
 
-<nav>
+        <!-- Cap 5 -->
+        <div class="card" style="border-color: #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
+                    <img src="https://i.ytimg.com/vi/rk0HBqSqpgg/maxresdefault.jpg" alt="Episodio 5" style="width: 100%; height: auto; display: block;">
+                </div>
+                <span style="color: #9b59b6; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 5</span>
+                <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Home</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">Los secretos del pasado son revelados mientras una entidad antigua comienza a despertar.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=rk0HBqSqpgg" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+        </div>
 
-<a href="/pages/glitch">Glitch</a>
+        <!-- Cap 6 -->
+        <div class="card" style="border-color: #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
+                    <img src="https://i.ytimg.com/vi/U7i6fi3z9Nk/maxresdefault.jpg" alt="Episodio 6" style="width: 100%; height: auto; display: block;">
+                </div>
+                <span style="color: #9b59b6; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 6</span>
+                <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Dead End</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">Una carrera contra el tiempo para impedir que la infección se propague fuera de control.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=U7i6fi3z9Nk" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+        </div>
 
-<a href="/pages/series">Series</a>
+        <!-- Cap 7 -->
+        <div class="card" style="border-color: #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
+                    <img src="https://static.wikia.nocookie.net/murder-drones/images/b/b3/MassDestruction.jpg/revision/latest?cb=20240328220145" alt="Episodio 7" style="width: 100%; height: auto; display: block;">
+                </div>
+                <span style="color: #9b59b6; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 7</span>
+                <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Mass Destruction</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">La lucha interna alcanza un punto crítico mientras la distorsión consume todo el entorno.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=EOqw86OGIB0" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+        </div>
 
-<a href="/pages/tienda">Tienda</a>
+        <!-- Cap 8 -->
+        <div class="card" style="border-color: #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div style="overflow: hidden; border-radius: 8px; margin-bottom: 12px; border: 1px solid #22222a;">
+                    <img src="https://i.ytimg.com/vi/caR9ouipm8o/maxresdefault.jpg" alt="Episodio 8" style="width: 100%; height: auto; display: block;">
+                </div>
+                <span style="color: #9b59b6; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Episodio 8</span>
+                <h3 style="font-size: 18px; margin: 5px 0 10px 0; color: #f5f5f7;">Absolute End</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">El enfrentamiento final donde el destino de Copper 9 se decide en una batalla decisiva.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=caR9ouipm8o&t=1s" target="_blank" class="btn" style="text-align: center; display: block; font-size: 12px; padding: 8px;">Ver Episodio 🎬</a>
+        </div>
 
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/md">Inicio</a>
-
-<a href="/series/md/informacion">Información</a>
-
-<a href="/series/md/capitulos" class="activo">Capítulos</a>
-
-<a href="/series/md/personajes">Personajes</a>
-
-<a href="/series/md/participantes">Participantes</a>
-
-<a href="/series/md/musica">Música</a>
-
-<a href="/series/md/curiosidades">Curiosidades</a>
-
-<a href="/series/md/redes">Redes</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Capítulos</h1>
-
-<div class="cards">
-
-<a href="#">
-<div class="card">
-<img src="{{ url_for('static', filename='img/series/md/episodes/ep1.jpg') }}">
-<h3>Episodio 1</h3>
-<p>(Título)</p>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<img src="{{ url_for('static', filename='img/series/md/episodes/ep2.jpg') }}">
-<h3>Episodio 2</h3>
-<p>(Título)</p>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<img src="{{ url_for('static', filename='img/series/md/episodes/ep3.jpg') }}">
-<h3>Episodio 3</h3>
-<p>(Título)</p>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<img src="{{ url_for('static', filename='img/series/md/episodes/ep4.jpg') }}">
-<h3>Episodio 4</h3>
-<p>(Título)</p>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<img src="{{ url_for('static', filename='img/series/md/episodes/ep5.jpg') }}">
-<h3>Episodio 5</h3>
-<p>(Título)</p>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<img src="{{ url_for('static', filename='img/series/md/episodes/ep6.jpg') }}">
-<h3>Episodio 6</h3>
-<p>(Título)</p>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<img src="{{ url_for('static', filename='img/series/md/episodes/ep7.jpg') }}">
-<h3>Episodio 7</h3>
-<p>(Título)</p>
-</div>
-</a>
-
-<a href="#">
-<div class="card">
-<img src="{{ url_for('static', filename='img/series/md/episodes/final.jpg') }}">
-<h3>Final</h3>
-<p>(Título)</p>
-</div>
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>Proyecto realizado por Moon y Yammy ©2026</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

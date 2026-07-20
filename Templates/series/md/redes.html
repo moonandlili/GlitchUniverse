@@ -1,131 +1,75 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Redes Oficiales | Murder Drones{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-<meta charset="UTF-8">
+    <!-- Banner -->
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}" alt="Murder Drones Socials Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menú de navegación -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(155, 89, 182, 0.2);">
+        <a href="{{ url_for('md') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('md_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('md_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('md_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('md_productores') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('md_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('md_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('md_redes') }}" style="text-decoration: none; color: #fff; background: #9b59b6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);">Redes Oficiales</a>
+    </div>
 
-<title>Redes oficiales | Murder Drones</title>
+    <h1 style="font-size: 36px; text-shadow: 0 0 10px rgba(155, 89, 182, 0.5); color: #9b59b6; margin-top: 30px; font-weight: 800;">
+        CONÉCTATE A COPPER 9
+    </h1>
+    <p style="color: #a1a1a6; margin-bottom: 40px; font-size: 15px;">Sigue los canales oficiales para mantenerte al día con todo el contenido de GLITCH y el mundo de Murder Drones.</p>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Cuadrícula de Redes -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 950px; margin: 0 auto 60px auto; padding: 0 15px; text-align: left;">
 
-</head>
+        <div class="card" style="border: 2px solid #9b59b6; display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 25px; border-radius: 12px; background: #111115;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">Sitio Web de GLITCH</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    Portal principal de la productora. Encuentra el catálogo completo, noticias y la tienda con el merchandising oficial de la serie.
+                </p>
+            </div>
+            <a href="https://www.glitchprod.com/" target="_blank" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #9b59b6; color: #fff; border-radius: 5px; text-decoration: none;">Visitar Web Oficial 🌐</a>
+        </div>
 
-<body>
+        <div class="card" style="border: 2px solid #ff0000; display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 25px; border-radius: 12px; background: #111115;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">GLITCH en YouTube</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    El canal donde todo sucede. Episodios completos, teasers, bloopers y contenido exclusivo de la serie.
+                </p>
+            </div>
+            <a href="https://www.youtube.com/@glitch_prod" target="_blank" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #ff0000; color: #fff; border-radius: 5px; text-decoration: none;">Ir al Canal 📺</a>
+        </div>
 
-<header>
+        <div class="card" style="border: 2px solid #1da1f2; display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 25px; border-radius: 12px; background: #111115;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">X (Twitter) Oficial</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    Actualizaciones en tiempo real, arte conceptual, anuncios y comunicación directa con la comunidad de fans.
+                </p>
+            </div>
+            <a href="https://x.com/glitch_prod" target="_blank" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #1da1f2; color: #fff; border-radius: 5px; text-decoration: none;">Seguir en X 🐦</a>
+        </div>
 
-<a href="/">
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-</a>
+        <div class="card" style="border: 2px solid #e1306c; display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 25px; border-radius: 12px; background: #111115;">
+            <div>
+                <h3 style="font-size: 18px; color: #f5f5f7; margin-bottom: 8px;">Instagram Oficial</h3>
+                <p style="color: #a1a1a6; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    Galería visual de la serie, fotos de la producción y momentos destacados en formato visual.
+                </p>
+            </div>
+            <a href="https://www.instagram.com/glitch_prod/" target="_blank" style="text-align: center; display: block; font-size: 12px; padding: 10px; background: #e1306c; color: #fff; border-radius: 5px; text-decoration: none;">Ver Instagram 📸</a>
+        </div>
 
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/md">Inicio</a>
-
-<a href="/series/md/informacion">Información</a>
-
-<a href="/series/md/capitulos">Capítulos</a>
-
-<a href="/series/md/personajes">Personajes</a>
-
-<a href="/series/md/participantes">Participantes</a>
-
-<a href="/series/md/musica">Música</a>
-
-<a href="/series/md/curiosidades">Curiosidades</a>
-
-<a href="/series/md/redes" class="activo">Redes</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Redes oficiales</h1>
-
-<div class="cards">
-
-<a href="#">
-<!-- Reemplazar por el canal oficial de YouTube -->
-
-<div class="card">
-
-<h3>YouTube</h3>
-
-</div>
-
-</a>
-
-<a href="#">
-<!-- Reemplazar por la página oficial -->
-
-<div class="card">
-
-<h3>Sitio web</h3>
-
-</div>
-
-</a>
-
-<a href="#">
-<!-- Reemplazar por la cuenta oficial en X -->
-
-<div class="card">
-
-<h3>X (Twitter)</h3>
-
-</div>
-
-</a>
-
-<a href="#">
-<!-- Reemplazar por Instagram oficial -->
-
-<div class="card">
-
-<h3>Instagram</h3>
-
-</div>
-
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

@@ -1,198 +1,81 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Información | Murder Drones{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center;">
 
-<meta charset="UTF-8">
+    <!-- Banner -->
+    <div style="width: 100%; max-width: 950px; margin: 20px auto; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <img src="https://i.pinimg.com/736x/e0/41/80/e04180afe9bf7bbb4a8a7dbdf6ae9479.jpg" alt="Murder Drones Banner" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 250px;">
+    </div>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menú de navegación -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(155, 89, 182, 0.2);">
+        <a href="{{ url_for('md') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Inicio</a>
+        <a href="{{ url_for('md_informacion') }}" style="text-decoration: none; color: #fff; background: #9b59b6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);">Información</a>
+        <a href="{{ url_for('md_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('md_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('md_productores') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('md_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('md_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('md_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-<title>Información | Murder Drones</title>
+    <div style="max-width: 950px; margin: 40px auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; text-align: left;">
+        
+        <!-- Columna izquierda: Póster y Tabla -->
+        <div>
+            <div class="card" style="border: 2px solid #9b59b6; box-shadow: 0 0 20px rgba(155, 89, 182, 0.2); overflow: hidden; border-radius: 16px; margin-bottom: 30px;">
+                <img src="https://m.media-amazon.com/images/M/MV5BZmIwNDhhMTgtMWIyYS00Yzg0LTlmZjUtYTczNTU5MGVkNjlhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Póster Murder Drones" style="width: 100%; height: auto; display: block;">
+            </div>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+            <table style="width: 100%; border-collapse: collapse; background: #111115; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #9b59b6; background: #16161a; width: 40%;">Título</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">Murder Drones</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #9b59b6; background: #16161a;">Creador</th>
+                    <td style="padding: 12px 15px; font-size: 14px;"><a href="#" style="color: #3498db; text-decoration: underline;">Liam Vickers</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #9b59b6; background: #16161a;">Estreno</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">29 de octubre de 2021</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #9b59b6; background: #16161a;">Estado</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">Finalizada</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #22222a;">
+                    <th style="padding: 12px 15px; text-align: left; color: #9b59b6; background: #16161a;">Géneros</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-style: italic; font-size: 14px;">Ciencia ficción, Horror, Comedia negra</td>
+                </tr>
+                <tr>
+                    <th style="padding: 12px 15px; text-align: left; color: #9b59b6; background: #16161a;">Estudio</th>
+                    <td style="padding: 12px 15px; color: #f5f5f7; font-size: 14px;">GLITCH Productions</td>
+                </tr>
+            </table>
+        </div>
 
-</head>
+        <!-- Columna derecha: Texto -->
+        <div>
+            <h2 style="border-left: 4px solid #9b59b6; padding-left: 15px; font-size: 24px; text-transform: uppercase; margin-bottom: 15px; color: #fff;">Sinopsis Oficial</h2>
+            <p style="color: #d1d1d6; margin-bottom: 25px; font-size: 16px; line-height: 1.6;">
+                En el planeta Copper 9, la humanidad ha desaparecido tras un catastrófico colapso del núcleo planetario. Los robots trabajadores que quedaron atrás han construido su propia civilización, pero la corporación JCJenson ha enviado a los "Drones de Desmantelamiento" para exterminarlos. Uzi, una joven drone rebelde, decide luchar contra sus asesinos y descubrir el misterioso origen del Solver Absoluto.
+            </p>
 
-<body>
+            <h2 style="border-left: 4px solid #9b59b6; padding-left: 15px; font-size: 24px; text-transform: uppercase; margin-bottom: 15px; color: #fff;">El Universo de la Serie</h2>
+            <p style="color: #d1d1d6; margin-bottom: 25px; font-size: 15px; line-height: 1.6;">
+                Murder Drones destaca por su animación 3D de alta calidad y un tono que equilibra perfectamente el horror corporal con situaciones de humor absurdo. La serie explora temas como la inteligencia artificial, la obsolescencia programada y la lucha de clases dentro de una estructura corporativa despiadada.
+            </p>
 
-<header>
+            <h2 style="border-left: 4px solid #9b59b6; padding-left: 15px; font-size: 24px; text-transform: uppercase; margin-bottom: 15px; color: #fff;">Impacto en GLITCH</h2>
+            <p style="color: #d1d1d6; margin-bottom: 25px; font-size: 15px; line-height: 1.6;">
+                Esta producción fue fundamental para consolidar a GLITCH Productions como uno de los estudios de animación independiente más importantes de internet. Su éxito no solo cimentó la carrera de Liam Vickers, sino que redefinió el estándar visual de las series web animadas actuales.
+            </p>
+        </div>
 
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
+    </div>
 </section>
-
-<section class="submenu-serie">
-
-<a href="/series/md">Inicio</a>
-
-<a href="/series/md/informacion" class="activo">Información</a>
-
-<a href="/series/md/capitulos">Capítulos</a>
-
-<a href="/series/md/personajes">Personajes</a>
-
-<a href="/series/md/participantes">Participantes</a>
-
-<a href="/series/md/musica">Música</a>
-
-<a href="/series/md/curiosidades">Curiosidades</a>
-
-<a href="/series/md/redes">Redes</a>
-
-</section>
-
-<section class="contenido">
-
-<h1>Información</h1>
-
-<img src="{{ url_for('static', filename='img/series/md/poster.png') }}">
-<!-- Reemplazar por el póster -->
-
-<h2>Sinopsis</h2>
-
-<p>
-
-(Escribir la sinopsis)
-
-</p>
-
-<h2>Información general</h2>
-
-<table>
-
-<tr>
-
-<th>Título</th>
-
-<td>Murder Drones</td>
-
-</tr>
-
-<tr>
-
-<th>Creadores</th>
-
-<td>
-
-<a href="/people/liam_vickers">
-
-Liam Vickers
-
-</a>
-
-</td>
-
-</tr>
-
-<tr>
-
-<th>Productores</th>
-
-<td>
-
-<a href="/people/kevin_lerdwichagul">
-
-Kevin Lerdwichagul
-
-</a>
-
-<br>
-
-<a href="/people/luke_lerdwichagul">
-
-Luke Lerdwichagul
-
-</a>
-
-</td>
-
-</tr>
-
-<tr>
-
-<th>Estreno</th>
-
-<td>
-
-(Completar)
-
-</td>
-
-</tr>
-
-<tr>
-
-<th>Estado</th>
-
-<td>
-
-Finalizada
-
-</td>
-
-</tr>
-
-<tr>
-
-<th>Géneros</th>
-
-<td>
-
-(Completar)
-
-</td>
-
-</tr>
-
-<tr>
-
-<th>Idioma original</th>
-
-<td>
-
-Inglés
-
-</td>
-
-</tr>
-
-</table>
-
-</section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

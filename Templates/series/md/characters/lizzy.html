@@ -1,111 +1,77 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Botón Volver -->
+    <div style="margin: 20px auto 40px auto; text-align: left; max-width: 950px;">
+        <a href="/series/md/personajes" style="text-decoration: none; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 10px 20px; border-radius: 30px; font-size: 14px; font-weight: bold; border: 1px solid rgba(255, 105, 180, 0.3); transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);" onmouseover="this.style.background='#ff69b4'; this.style.color='#000'; this.style.boxShadow='0 0 15px rgba(255, 105, 180, 0.6)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.08)'; this.style.color='#fff'; this.style.boxShadow='0 0 10px rgba(255, 105, 180, 0.1)'">
+            ← Volver a Personajes
+        </a>
+    </div>
 
-<head>
+    <!-- Ficha Principal -->
+    <div class="personaje-ficha" style="background: #111115; border-radius: 16px; border-left: 4px solid #ff69b4; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; display: flex; flex-direction: row; gap: 35px; align-items: flex-start; margin-bottom: 30px; flex-wrap: wrap;">
+        
+        <!-- Imagen del Personaje -->
+        <div style="flex-shrink: 0; text-align: center; margin: 0 auto 20px auto;">
+            <img src="{{ url_for('static', filename='img/characters/md/lizzy.png') }}" alt="Lizzy" style="width: 220px; height: 220px; border-radius: 16px; object-fit: contain; background: #1a1a24; border: 3px solid #ff69b4; box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);">
+        </div>
 
-<meta charset="UTF-8">
+        <!-- Info del Personaje -->
+        <div style="flex-grow: 1; min-width: 280px;">
+            <h1 style="font-size: 36px; color: #fff; margin: 0 0 5px 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+                Lizzy
+            </h1>
+            <p style="font-size: 16px; color: #ff69b4; margin: 0 0 20px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                La Animadora Popular
+            </p>
+            
+            <p style="font-size: 15px; color: #a1a1a6; margin-bottom: 20px; line-height: 1.6;">
+                <strong>Lizzy</strong> es la estudiante más popular de la escuela en la colonia y la clásica "chica mala". Tiene una actitud superficial, sarcástica y a menudo cruel, preocupándose más por su estatus social y sus redes sociales que por la supervivencia. A pesar de que los Disassembly Drones son la mayor amenaza para su especie, desarrolla una extraña alianza y amistad con V.
+            </p>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Grid de Estadísticas -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 25px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #ff69b4; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Especie</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Worker Drone</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #ff69b4; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Habilidad / Arma</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Teléfono y Estatus Social</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <span style="color: #ff69b4; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 3px;">Voz Original</span>
+                    <span style="color: #fff; font-size: 14px; font-weight: 500;">Caitlin Myers</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<title>Lizzy | Murder Drones</title>
+    <!-- Curiosidades -->
+    <div style="background: #111115; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; margin-bottom: 30px; border: 1px solid rgba(255, 255, 255, 0.05);">
+        <h2 style="font-size: 22px; color: #fff; margin: 0 0 20px 0; font-weight: 700; border-bottom: 2px solid rgba(255, 105, 180, 0.3); padding-bottom: 10px;">
+            Curiosidades de Lizzy
+        </h2>
+        <ul style="color: #a1a1a6; font-size: 15px; line-height: 1.8; margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong style="color: #ff69b4;">Amistad Peligrosa:</strong> Se hace mejor amiga de V, una Murder Drone que literalmente cazaba a su gente, lo que demuestra su extraño sentido de la autopreservación (o falta del mismo) a favor de verse "genial".</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #ff69b4;">Adicta a la Tecnología:</strong> Rara vez se la ve sin su teléfono. Es capaz de detenerse en medio de una situación de vida o muerte simplemente para tomarse una selfie o grabar un video para sus seguidores.</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #ff69b4;">Rivalidad con Uzi:</strong> Es una de las principales acosadoras de Uzi en la escuela, burlándose constantemente de su actitud emo, su ropa y de su padre, Khan.</li>
+        </ul>
+    </div>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-<!-- Reemplazar por el logo -->
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-<a href="/pages/juegos">Juegos</a>
-
-<a href="/pages/fanarts">Fanarts</a>
-
-<a href="/pages/redes">Redes</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-
-</section>
-
-<section class="submenu-serie">
-
-<a href="/series/md/personajes">
-
-← Volver a Personajes
-
-</a>
-
-</section>
-
-<section class="contenido">
-
-<img src="{{ url_for('static', filename='img/characters/md/lizzy.png') }}">
-<!-- Reemplazar por la imagen -->
-
-<h1>Lizzy</h1>
-
-<p><strong>Nombre:</strong> Lizzy</p>
-
-<p><strong>Primera aparición:</strong> (Episodio)</p>
-
-<p><strong>Especie:</strong> (Escribir)</p>
-
-<p><strong>Edad:</strong> (Escribir)</p>
-
-<p><strong>Personalidad:</strong> (Escribir)</p>
-
-<p><strong>Historia:</strong> (Escribir)</p>
-
-<p><strong>Curiosidades:</strong> (Escribir)</p>
-
-<p><strong>Actor/Actriz de voz (original):</strong> (Nombre)</p>
-
-<p><strong>Actor/Actriz de voz (español):</strong> (Nombre)</p>
-
-<p><strong>Galería:</strong></p>
-
-<img src="{{ url_for('static', filename='img/characters/md/lizzy/gallery1.jpg') }}">
-
-<img src="{{ url_for('static', filename='img/characters/md/lizzy/gallery2.jpg') }}">
-
-<img src="{{ url_for('static', filename='img/characters/md/lizzy/gallery3.jpg') }}">
+    <!-- Galería -->
+    <div style="background: #111115; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); text-align: left; margin-bottom: 50px; border: 1px solid rgba(255, 255, 255, 0.05);">
+        <h2 style="font-size: 22px; color: #fff; margin: 0 0 20px 0; font-weight: 700; border-bottom: 2px solid rgba(255, 105, 180, 0.3); padding-bottom: 10px;">
+            Galería
+        </h2>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+            <img src="{{ url_for('static', filename='img/characters/md/lizzy/gallery1.jpg') }}" alt="Lizzy 1" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(255, 105, 180, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="{{ url_for('static', filename='img/characters/md/lizzy/gallery2.jpg') }}" alt="Lizzy 2" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(255, 105, 180, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="{{ url_for('static', filename='img/characters/md/lizzy/gallery3.jpg') }}" alt="Lizzy 3" style="width: 250px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(255, 105, 180, 0.5); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+    </div>
 
 </section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

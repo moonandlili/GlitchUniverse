@@ -1,119 +1,63 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="es">
+{% block title %}Murder Drones | Bienvenidos{% endblock %}
 
-<head>
+{% block content %}
+<section class="contenido" style="text-align: center; padding: 20px 15px;">
+    
+    <h1 style="font-size: 42px; text-shadow: 0 0 15px rgba(155, 89, 182, 0.6); color: #9b59b6; margin-top: 20px; font-weight: 900; letter-spacing: 2px;">
+        MURDER DRONES
+    </h1>
+    <p style="margin-bottom: 30px; color: #a1a1a6; font-size: 16px;">Bienvenido al páramo helado de Copper 9.</p>
 
-<meta charset="UTF-8">
+    <!-- Menú de navegación -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 0 auto 40px auto; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 30px; border: 1px solid rgba(155, 89, 182, 0.2);">
+        <a href="{{ url_for('md') }}" style="text-decoration: none; color: #fff; background: #9b59b6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: all 0.3s; box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);">Inicio</a>
+        <a href="{{ url_for('md_informacion') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Información</a>
+        <a href="{{ url_for('md_capitulos') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Capítulos</a>
+        <a href="{{ url_for('md_personajes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Personajes</a>
+        <a href="{{ url_for('md_productores') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Participantes</a>
+        <a href="{{ url_for('md_musica') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Música</a>
+        <a href="{{ url_for('md_curiosidades') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Curiosidades</a>
+        <a href="{{ url_for('md_redes') }}" style="text-decoration: none; color: #a1a1a6; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.color='#fff'; this.style.background='rgba(155,89,182,0.2)'" onmouseout="this.style.color='#a1a1a6'; this.style.background='transparent'">Redes Oficiales</a>
+    </div>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sección de presentación -->
+    <div style="max-width: 950px; margin: 40px auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; text-align: left;">
+        
+        <div class="card" style="border: 2px solid #9b59b6; box-shadow: 0 0 20px rgba(155, 89, 182, 0.2); overflow: hidden; border-radius: 16px; background: #111;">
+            <img src="https://www.wikihow.com/images/0/07/Quiz_-_murder_drones.jpg" alt="Murder Drones Poster" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
 
-<title>Murder Drones</title>
+        <div>
+            <h2 style="border-left: 4px solid #9b59b6; padding-left: 15px; font-size: 24px; text-transform: uppercase; margin-bottom: 15px; color: #fff;">¿Sobrevivirás a la masacre?</h2>
+            <p style="color: #d1d1d6; margin-bottom: 20px; font-size: 16px; line-height: 1.6;">
+                En un planeta abandonado por la humanidad tras un colapso nuclear, los robots trabajadores intentan reconstruir una civilización. Sin embargo, la corporación JCJenson ha enviado a los "Murder Drones" para eliminarlos a todos. Únete a Uzi en su lucha por la supervivencia y descubre la verdad oculta tras el Solver Absoluto.
+            </p>
+            <p style="color: #a1a1a6; font-size: 14px; line-height: 1.6;">
+                Navega por nuestro portal dedicado para explorar la guía de episodios, conocer los perfiles de los drones de desmantelamiento y sumergirte en la inquietante banda sonora de la serie.
+            </p>
+        </div>
+    </div>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #9b59b6, transparent); margin: 50px auto; max-width: 800px;">
 
-</head>
-
-<body>
-
-<header>
-
-<a href="/">
-
-<img src="{{ url_for('static', filename='img/logo/logo.png') }}">
-<!-- Reemplazar por el logo -->
-
-</a>
-
-<nav>
-
-<a href="/pages/glitch">Glitch</a>
-
-<a href="/pages/series">Series</a>
-
-<a href="/pages/tienda">Tienda</a>
-
-<a href="/pages/anuncios">Anuncios</a>
-
-</nav>
-
-</header>
-
-<section class="banner">
-
-<img src="{{ url_for('static', filename='img/series/md/banner.jpg') }}">
-<!-- Reemplazar por el banner -->
-
-</section>
-
-<section class="titulo">
-
-<h1>Murder Drones</h1>
-
-<p>
-
-Explora todo el contenido relacionado con la serie.
-
-</p>
-
-</section>
-
-<section class="menu-serie">
-
-<a href="/series/md/informacion">
-
-Información
-
-</a>
-
-<a href="/series/md/capitulos">
-
-Capítulos
-
-</a>
-
-<a href="/series/md/personajes">
-
-Personajes
-
-</a>
-
-<a href="/series/md/participantes">
-
-Participantes
-
-</a>
-
-<a href="/series/md/musica">
-
-Música
-
-</a>
-
-<a href="/series/md/curiosidades">
-
-Curiosidades
-
-</a>
-
-<a href="/series/md/redes">
-
-Redes oficiales
-
-</a>
+    <!-- Video Piloto -->
+    <div style="max-width: 800px; margin: 0 auto 50px auto; text-align: left;">
+        <h2 style="border-left: 4px solid #3498db; padding-left: 15px; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; text-align: center; color: #fff;">
+            Mira el Episodio Piloto Oficial
+        </h2>
+        
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 2px solid #22222a;">
+            <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                src="https://www.youtube.com/watch?v=mImFz8mkaHo&t=7s" 
+                title="Murder Drones Pilot" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
 
 </section>
-
-<footer>
-
-<p>
-
-Proyecto realizado por Moon y Yammy ©2026
-
-</p>
-
-</footer>
-
-</body>
-
-</html>
+{% endblock %}
